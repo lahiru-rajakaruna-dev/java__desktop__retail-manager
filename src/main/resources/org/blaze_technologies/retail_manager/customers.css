@@ -1,0 +1,95 @@
+.customers-root{
+    -fx-background-color:#F4F6F9;
+}
+
+.page-title{
+    -fx-font-size:26px;
+    -fx-font-weight:bold;
+}
+
+.text-field{
+    -fx-background-color:white;
+    -fx-background-radius:10;
+    -fx-border-radius:10;
+    -fx-border-color:#D9E1EC;
+    -fx-padding:10 14;
+}
+
+.button{
+    -fx-background-color:#2563EB;
+    -fx-text-fill:white;
+    -fx-background-radius:10;
+    -fx-padding:10 18;
+    -fx-font-weight:bold;
+}
+
+.button:hover{
+    -fx-background-color:#1D4ED8;
+}
+
+.card{
+    -fx-background-color:white;
+    -fx-background-radius:14;
+    -fx-padding:18;
+    -fx-border-radius:14;
+    -fx-border-color:#E3E8EF;
+}
+
+.section-title{
+    -fx-font-size:17px;
+    -fx-font-weight:bold;
+}
+
+.metric-card{
+    -fx-background-color:white;
+    -fx-background-radius:14;
+    -fx-padding:18;
+    -fx-border-radius:14;
+    -fx-border-color:#E3E8EF;
+}
+
+.metric-title{
+    -fx-text-fill:#667085;
+    -fx-font-size:12px;
+}
+
+.metric-value{
+    -fx-font-size:28px;
+    -fx-font-weight:bold;
+    -fx-text-fill:#2563EB;
+}
+
+.table-view{
+    -fx-background-color:white;
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#E3E8EF;
+}
+
+.table-view .column-header-background{
+    -fx-background-color:#F8FAFC;
+}
+
+.table-view .column-header{
+    -fx-background-color:transparent;
+    -fx-font-weight:bold;
+}
+
+.table-row-cell:selected{
+    -fx-background-color:#DBEAFE;
+}
+
+.shortcut-bar{
+    -fx-background-color:white;
+    -fx-border-color:#D9E1EC;
+    -fx-border-width:1 0 0 0;
+}
+
+.shortcut{
+    -fx-background-color:#EEF4FF;
+    -fx-background-radius:6;
+    -fx-padding:4 10;
+    -fx-text-fill:#2563EB;
+    -fx-font-weight:bold;
+    -fx-font-size:12px;
+}

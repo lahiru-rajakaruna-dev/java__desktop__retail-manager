@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="org.blaze_technologies.retail_manager.controllers.CustomersController"
+	prefWidth="1600" prefHeight="900">
+
+	<!-- ========================================================= -->
+	<!-- Header -->
+	<!-- ========================================================= -->
+
+	<top>
+
+		<VBox spacing="12">
+
+			<padding>
+				<Insets top="20" right="20" bottom="16" left="20" />
+			</padding>
+
+			<Label text="Customers" styleClass="page-title" />
+
+			<HBox spacing="12">
+
+				<TextField fx:id="searchField"
+					promptText="Search customer (F2)..." HBox.hgrow="ALWAYS" />
+
+				<Button fx:id="newCustomerButton" text="New Customer" />
+
+			</HBox>
+
+		</VBox>
+
+	</top>
+
+	<!-- ========================================================= -->
+	<!-- Main -->
+	<!-- ========================================================= -->
+
+	<center>
+
+		<SplitPane dividerPositions="0.42">
+
+			<!-- ================= LEFT ================= -->
+
+			<VBox spacing="12">
+
+				<padding>
+					<Insets top="16" right="16" bottom="16" left="20" />
+				</padding>
+
+				<TableView fx:id="customerTable" VBox.vgrow="ALWAYS">
+
+					<columns>
+
+						<TableColumn text="Customer" prefWidth="220" />
+
+						<TableColumn text="Phone" prefWidth="130" />
+
+						<TableColumn text="Balance" prefWidth="100" />
+
+					</columns>
+
+				</TableView>
+
+			</VBox>
+
+			<!-- ================= RIGHT ================= -->
+
+			<VBox spacing="18">
+
+				<padding>
+					<Insets top="16" right="20" bottom="16" left="16" />
+				</padding>
+
+				<!-- Customer Card -->
+
+				<VBox spacing="12" styleClass="card">
+
+					<Label text="Customer Details" styleClass="section-title" />
+
+					<GridPane hgap="18" vgap="12">
+
+						<columnConstraints>
+
+							<ColumnConstraints percentWidth="30" />
+
+							<ColumnConstraints percentWidth="70" />
+
+						</columnConstraints>
+
+						<Label text="Name" />
+						<Label fx:id="nameLabel" GridPane.columnIndex="1" text="-" />
+
+						<Label text="Phone" GridPane.rowIndex="1" />
+
+						<Label fx:id="phoneLabel" GridPane.rowIndex="1"
+							GridPane.columnIndex="1" text="-" />
+
+						<Label text="Address" GridPane.rowIndex="2" />
+
+						<Label fx:id="addressLabel" GridPane.rowIndex="2"
+							GridPane.columnIndex="1" text="-" />
+
+					</GridPane>
+
+				</VBox>
+
+				<!-- Balance -->
+
+				<HBox spacing="16">
+
+					<VBox styleClass="metric-card" HBox.hgrow="ALWAYS">
+
+						<Label text="Outstanding Balance" styleClass="metric-title" />
+
+						<Label fx:id="balanceLabel" text="Rs. 0.00"
+							styleClass="metric-value" />
+
+					</VBox>
+
+					<VBox styleClass="metric-card" HBox.hgrow="ALWAYS">
+
+						<Label text="Total Purchases" styleClass="metric-title" />
+
+						<Label fx:id="purchaseLabel" text="0"
+							styleClass="metric-value" />
+
+					</VBox>
+
+				</HBox>
+
+				<!-- Recent Transactions -->
+
+				<VBox spacing="10" VBox.vgrow="ALWAYS" styleClass="card">
+
+					<Label text="Recent Transactions" styleClass="section-title" />
+
+					<TableView fx:id="transactionTable" VBox.vgrow="ALWAYS">
+
+						<columns>
+
+							<TableColumn text="Date" prefWidth="110" />
+
+							<TableColumn text="Invoice" prefWidth="130" />
+
+							<TableColumn text="Amount" prefWidth="120" />
+
+							<TableColumn text="Balance" prefWidth="120" />
+
+						</columns>
+
+					</TableView>
+
+				</VBox>
+
+			</VBox>
+
+		</SplitPane>
+
+	</center>
+
+	<!-- ========================================================= -->
+	<!-- Keyboard Help -->
+	<!-- ========================================================= -->
+
+	<bottom>
+
+		<HBox spacing="10" styleClass="shortcut-bar">
+
+			<padding>
+				<Insets top="10" right="18" bottom="10" left="18" />
+			</padding>
+
+			<Label text="F2 Search" styleClass="shortcut" />
+
+			<Label text="Ctrl+N New" styleClass="shortcut" />
+
+			<Label text="Enter View" styleClass="shortcut" />
+
+			<Label text="F7 Payment" styleClass="shortcut" />
+
+			<Label text="F8 Statement" styleClass="shortcut" />
+
+			<Label text="Delete Remove" styleClass="shortcut" />
+
+		</HBox>
+
+	</bottom>
+
+</BorderPane>
