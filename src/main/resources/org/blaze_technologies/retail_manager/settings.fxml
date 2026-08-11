@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="org.blaze_technologies.retail_manager.controllers.SettingsController"
+	prefWidth="1600" prefHeight="900">
+
+	<top>
+		<VBox spacing="8">
+			<padding>
+				<Insets top="20" right="20" bottom="16" left="20" />
+			</padding>
+
+			<Label text="Settings" styleClass="page-title" />
+			<Label text="Configure shop, users, receipts, and backups"
+				styleClass="page-subtitle" />
+		</VBox>
+	</top>
+
+	<center>
+		<HBox spacing="20">
+
+			<!-- Left navigation -->
+			<VBox spacing="8" styleClass="settings-nav">
+				<padding>
+					<Insets top="16" right="16" bottom="16" left="16" />
+				</padding>
+
+				<Button text="Shop Information"
+					styleClass="nav-button nav-active" />
+				<Button text="Users" styleClass="nav-button" />
+				<Button text="Receipt" styleClass="nav-button" />
+				<Button text="Backup and Restore" styleClass="nav-button" />
+				<Button text="System" styleClass="nav-button" />
+
+				<Region VBox.vgrow="ALWAYS" />
+
+				<Label text="↑ ↓ Navigate" styleClass="nav-hint" />
+			</VBox>
+
+			<!-- Content area -->
+			<StackPane HBox.hgrow="ALWAYS">
+
+				<ScrollPane fitToWidth="true"
+					styleClass="settings-scroll">
+					<content>
+
+						<VBox spacing="18" styleClass="content-area">
+
+							<!-- Shop Information -->
+							<VBox spacing="16" styleClass="card">
+								<Label text="Shop Information" styleClass="section-title" />
+
+								<GridPane hgap="18" vgap="14">
+									<columnConstraints>
+										<ColumnConstraints percentWidth="30" />
+										<ColumnConstraints percentWidth="70" />
+									</columnConstraints>
+
+									<Label text="Shop Name" />
+									<TextField GridPane.columnIndex="1"
+										promptText="My Retail Shop" />
+
+									<Label text="Phone" GridPane.rowIndex="1" />
+									<TextField GridPane.rowIndex="1"
+										GridPane.columnIndex="1" />
+
+									<Label text="Address" GridPane.rowIndex="2" />
+									<TextArea GridPane.rowIndex="2"
+										GridPane.columnIndex="1" prefRowCount="3" />
+
+									<Label text="Currency" GridPane.rowIndex="3" />
+									<ComboBox GridPane.rowIndex="3"
+										GridPane.columnIndex="1" promptText="Select currency" />
+								</GridPane>
+							</VBox>
+
+							<!-- Receipt -->
+							<VBox spacing="16" styleClass="card">
+								<Label text="Receipt Settings" styleClass="section-title" />
+
+								<GridPane hgap="18" vgap="14">
+									<columnConstraints>
+										<ColumnConstraints percentWidth="30" />
+										<ColumnConstraints percentWidth="70" />
+									</columnConstraints>
+
+									<Label text="Printer" />
+									<ComboBox GridPane.columnIndex="1" />
+
+									<Label text="Paper Width" GridPane.rowIndex="1" />
+									<ComboBox GridPane.rowIndex="1"
+										GridPane.columnIndex="1" />
+
+									<Label text="Header" GridPane.rowIndex="2" />
+									<TextArea GridPane.rowIndex="2"
+										GridPane.columnIndex="1" prefRowCount="2" />
+
+									<Label text="Footer" GridPane.rowIndex="3" />
+									<TextArea GridPane.rowIndex="3"
+										GridPane.columnIndex="1" prefRowCount="2" />
+								</GridPane>
+							</VBox>
+
+							<!-- Backup -->
+							<VBox spacing="16" styleClass="card">
+								<Label text="Backup and Restore" styleClass="section-title" />
+
+								<HBox spacing="12">
+									<Button text="Create Backup" />
+									<Button text="Restore Backup"
+										styleClass="secondary-button" />
+								</HBox>
+
+								<CheckBox text="Create automatic backup on exit" />
+								<CheckBox text="Keep last 7 backups" />
+							</VBox>
+
+							<!-- Save -->
+							<HBox spacing="12" alignment="CENTER_RIGHT">
+								<Button text="Cancel" styleClass="secondary-button" />
+								<Button text="Save Changes" />
+							</HBox>
+
+						</VBox>
+
+					</content>
+				</ScrollPane>
+			</StackPane>
+		</HBox>
+	</center>
+
+	<bottom>
+		<HBox spacing="10" styleClass="shortcut-bar">
+			<padding>
+				<Insets top="10" right="18" bottom="10" left="18" />
+			</padding>
+
+			<Label text="Ctrl+S Save" styleClass="shortcut" />
+			<Label text="Ctrl+B Backup" styleClass="shortcut" />
+			<Label text="Ctrl+R Restore" styleClass="shortcut" />
+			<Label text="Esc Back" styleClass="shortcut" />
+		</HBox>
+	</bottom>
+
+</BorderPane>
