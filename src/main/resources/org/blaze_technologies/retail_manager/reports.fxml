@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="org.blaze_technologies.retail_manager.controllers.ReportsController"
+	prefWidth="1600" prefHeight="900">
+
+	<!-- ========================================================= -->
+	<!-- Header -->
+	<!-- ========================================================= -->
+
+	<top>
+
+		<VBox spacing="18">
+
+			<padding>
+				<Insets top="20" right="20" bottom="16" left="20" />
+			</padding>
+
+			<Label text="Reports" styleClass="page-title" />
+
+			<!-- KPI Cards -->
+
+			<HBox spacing="16">
+
+				<VBox HBox.hgrow="ALWAYS" styleClass="metric-card">
+
+					<Label text="Total Sales" styleClass="metric-title" />
+
+					<Label fx:id="salesValue" text="Rs. 0.00"
+						styleClass="metric-value" />
+
+				</VBox>
+
+				<VBox HBox.hgrow="ALWAYS" styleClass="metric-card">
+
+					<Label text="Profit" styleClass="metric-title" />
+
+					<Label fx:id="profitValue" text="Rs. 0.00"
+						styleClass="metric-value" />
+
+				</VBox>
+
+				<VBox HBox.hgrow="ALWAYS" styleClass="metric-card">
+
+					<Label text="Transactions" styleClass="metric-title" />
+
+					<Label fx:id="transactionValue" text="0"
+						styleClass="metric-value" />
+
+				</VBox>
+
+				<VBox HBox.hgrow="ALWAYS" styleClass="metric-card">
+
+					<Label text="Average Sale" styleClass="metric-title" />
+
+					<Label fx:id="averageSaleValue" text="Rs. 0.00"
+						styleClass="metric-value" />
+
+				</VBox>
+
+			</HBox>
+
+		</VBox>
+
+	</top>
+
+	<!-- ========================================================= -->
+	<!-- Main -->
+	<!-- ========================================================= -->
+
+	<center>
+
+		<VBox spacing="18">
+
+			<padding>
+				<Insets top="0" right="20" bottom="20" left="20" />
+			</padding>
+
+			<!-- ================================================= -->
+			<!-- Report Tabs -->
+			<!-- ================================================= -->
+
+			<TabPane fx:id="reportTabs" tabClosingPolicy="UNAVAILABLE">
+
+				<tabs>
+
+					<Tab text="Sales" />
+
+					<Tab text="Inventory" />
+
+					<Tab text="Customers" />
+
+					<Tab text="Debtors" />
+
+				</tabs>
+
+			</TabPane>
+
+			<!-- ================================================= -->
+			<!-- Filters -->
+			<!-- ================================================= -->
+
+			<VBox spacing="16" styleClass="card">
+
+				<Label text="Filters" styleClass="section-title" />
+
+				<GridPane hgap="16" vgap="14">
+
+					<columnConstraints>
+
+						<ColumnConstraints percentWidth="12" />
+						<ColumnConstraints percentWidth="18" />
+
+						<ColumnConstraints percentWidth="12" />
+						<ColumnConstraints percentWidth="18" />
+
+						<ColumnConstraints percentWidth="12" />
+						<ColumnConstraints percentWidth="28" />
+
+					</columnConstraints>
+
+					<Label text="Date From" />
+
+					<DatePicker fx:id="fromDate" GridPane.columnIndex="1" />
+
+					<Label text="Date To" GridPane.columnIndex="2" />
+
+					<DatePicker fx:id="toDate" GridPane.columnIndex="3" />
+
+					<Label text="Cashier" GridPane.columnIndex="4" />
+
+					<ComboBox fx:id="cashierCombo" GridPane.columnIndex="5" />
+
+					<Label text="Customer" GridPane.rowIndex="1" />
+
+					<ComboBox fx:id="customerCombo" GridPane.rowIndex="1"
+						GridPane.columnIndex="1" />
+
+					<Label text="Category" GridPane.rowIndex="1"
+						GridPane.columnIndex="2" />
+
+					<ComboBox fx:id="categoryCombo" GridPane.rowIndex="1"
+						GridPane.columnIndex="3" />
+
+					<Label text="Payment" GridPane.rowIndex="1"
+						GridPane.columnIndex="4" />
+
+					<ComboBox fx:id="paymentCombo" GridPane.rowIndex="1"
+						GridPane.columnIndex="5" />
+
+				</GridPane>
+
+				<HBox spacing="10">
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Button fx:id="resetButton" text="Reset" />
+
+					<Button fx:id="generateButton" text="Generate Report" />
+
+					<Button fx:id="printButton" text="Print" />
+
+					<Button fx:id="exportButton" text="Export" />
+
+				</HBox>
+
+			</VBox>
+
+			<!-- ================================================= -->
+			<!-- Results -->
+			<!-- ================================================= -->
+
+			<VBox VBox.vgrow="ALWAYS" spacing="12" styleClass="card">
+
+				<Label text="Report Results" styleClass="section-title" />
+
+				<TableView fx:id="reportTable" VBox.vgrow="ALWAYS">
+
+					<columns>
+
+						<TableColumn text="Date" prefWidth="120" />
+
+						<TableColumn text="Reference" prefWidth="140" />
+
+						<TableColumn text="Customer" prefWidth="220" />
+
+						<TableColumn text="Cashier" prefWidth="160" />
+
+						<TableColumn text="Payment" prefWidth="140" />
+
+						<TableColumn text="Amount" prefWidth="130" />
+
+						<TableColumn text="Profit" prefWidth="130" />
+
+					</columns>
+
+				</TableView>
+
+			</VBox>
+
+		</VBox>
+
+	</center>
+
+	<!-- ========================================================= -->
+	<!-- Keyboard Shortcuts -->
+	<!-- ========================================================= -->
+
+	<bottom>
+
+		<HBox spacing="10" styleClass="shortcut-bar">
+
+			<padding>
+				<Insets top="10" right="18" bottom="10" left="18" />
+			</padding>
+
+			<Label text="F2 Report" styleClass="shortcut" />
+
+			<Label text="F3 Filters" styleClass="shortcut" />
+
+			<Label text="F5 Generate" styleClass="shortcut" />
+
+			<Label text="Ctrl+P Print" styleClass="shortcut" />
+
+			<Label text="Ctrl+E Export" styleClass="shortcut" />
+
+			<Label text="Ctrl+R Reset" styleClass="shortcut" />
+
+			<Label text="Esc Back" styleClass="shortcut" />
+
+			<Region HBox.hgrow="ALWAYS" />
+
+			<Label text="Ready" styleClass="status-text" />
+
+		</HBox>
+
+	</bottom>
+
+</BorderPane>

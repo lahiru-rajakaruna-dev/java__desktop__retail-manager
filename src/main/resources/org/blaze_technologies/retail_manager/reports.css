@@ -1,0 +1,428 @@
+/* ==========================================================================
+   REPORTS SCREEN
+   ========================================================================== */
+
+.reports-root {
+	-fx-background-color: #F4F6F9;
+}
+
+
+/* ==========================================================================
+   Page Title
+   ========================================================================== */
+
+.page-title {
+
+	-fx-font-size: 28px;
+
+	-fx-font-weight: bold;
+
+	-fx-text-fill: #1F2937;
+}
+
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.card {
+
+	-fx-background-color: white;
+
+	-fx-background-radius: 14;
+
+	-fx-border-radius: 14;
+
+	-fx-border-color: #E5E7EB;
+
+	-fx-border-width: 1;
+
+	-fx-padding: 18;
+}
+
+
+/* ==========================================================================
+   Section Titles
+   ========================================================================== */
+
+.section-title {
+
+	-fx-font-size: 17px;
+
+	-fx-font-weight: bold;
+
+	-fx-text-fill: #374151;
+}
+
+
+/* ==========================================================================
+   KPI Cards
+   ========================================================================== */
+
+.metric-card {
+
+	-fx-background-color: white;
+
+	-fx-background-radius: 14;
+
+	-fx-border-radius: 14;
+
+	-fx-border-color: #E5E7EB;
+
+	-fx-border-width: 1;
+
+	-fx-padding: 18;
+
+	-fx-spacing: 8;
+
+	-fx-min-height: 110;
+
+	-fx-effect: dropshadow(gaussian,
+			rgba(0, 0, 0, 0.05),
+			12,
+			0,
+			0,
+			3);
+}
+
+.metric-card:hover {
+
+	-fx-border-color: #2563EB;
+}
+
+.metric-title {
+
+	-fx-font-size: 12px;
+
+	-fx-text-fill: #6B7280;
+
+	-fx-font-weight: bold;
+}
+
+.metric-value {
+
+	-fx-font-size: 28px;
+
+	-fx-font-weight: bold;
+
+	-fx-text-fill: #2563EB;
+}
+
+
+/* ==========================================================================
+   Tab Pane
+   ========================================================================== */
+
+.tab-pane {
+
+	-fx-tab-min-width: 150;
+
+	-fx-tab-max-width: 150;
+}
+
+.tab-pane .tab-header-area {
+
+	-fx-padding: 0;
+}
+
+.tab-pane .tab-header-background {
+
+	-fx-background-color: transparent;
+}
+
+.tab {
+
+	-fx-background-color: white;
+
+	-fx-background-radius: 12 12 0 0;
+
+	-fx-border-color: #E5E7EB;
+
+	-fx-border-width: 1 1 0 1;
+
+	-fx-padding: 10 18;
+}
+
+.tab:selected {
+
+	-fx-background-color: #2563EB;
+}
+
+.tab .tab-label {
+
+	-fx-text-fill: #374151;
+
+	-fx-font-weight: bold;
+
+	-fx-font-size: 13px;
+}
+
+.tab:selected .tab-label {
+
+	-fx-text-fill: white;
+}
+
+.tab-pane:focused .tab:selected {
+
+	-fx-border-color: #1D4ED8;
+}
+
+
+/* ==========================================================================
+   Labels
+   ========================================================================== */
+
+.label {
+
+	-fx-text-fill: #374151;
+}
+
+
+/* ==========================================================================
+   Text Fields
+   ========================================================================== */
+
+.text-field {
+
+	-fx-background-color: white;
+
+	-fx-background-radius: 10;
+
+	-fx-border-radius: 10;
+
+	-fx-border-color: #D1D5DB;
+
+	-fx-padding: 8 12;
+}
+
+.text-field:focused {
+
+	-fx-border-width: 2;
+
+	-fx-border-color: #2563EB;
+}
+
+
+/* ==========================================================================
+   ComboBox
+   ========================================================================== */
+
+.combo-box {
+
+	-fx-background-color: white;
+
+	-fx-background-radius: 10;
+
+	-fx-border-radius: 10;
+
+	-fx-border-color: #D1D5DB;
+
+	-fx-padding: 3 6;
+}
+
+.combo-box:focused {
+
+	-fx-border-width: 2;
+
+	-fx-border-color: #2563EB;
+}
+
+
+/* ==========================================================================
+   Date Picker
+   ========================================================================== */
+
+.date-picker {
+
+	-fx-background-color: white;
+
+	-fx-background-radius: 10;
+
+	-fx-border-radius: 10;
+
+	-fx-border-color: #D1D5DB;
+}
+
+.date-picker:focused {
+
+	-fx-border-width: 2;
+
+	-fx-border-color: #2563EB;
+}
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.button {
+
+	-fx-background-color: #2563EB;
+
+	-fx-background-radius: 10;
+
+	-fx-text-fill: white;
+
+	-fx-font-weight: bold;
+
+	-fx-padding: 10 18;
+
+	-fx-cursor: hand;
+}
+
+.button:hover {
+
+	-fx-background-color: #1D4ED8;
+}
+
+.button:pressed {
+
+	-fx-background-color: #1E40AF;
+}
+
+.button:focused {
+
+	-fx-border-color: white;
+
+	-fx-border-width: 2;
+}
+
+
+/* ==========================================================================
+   TableView
+   ========================================================================== */
+
+.table-view {
+
+	-fx-background-color: white;
+
+	-fx-background-radius: 10;
+
+	-fx-border-radius: 10;
+
+	-fx-border-color: #E5E7EB;
+}
+
+.table-view .column-header-background {
+
+	-fx-background-color: #F9FAFB;
+
+	-fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header {
+
+	-fx-background-color: transparent;
+
+	-fx-border-width: 0;
+}
+
+.table-view .label {
+
+	-fx-font-weight: bold;
+
+	-fx-text-fill: #374151;
+}
+
+.table-row-cell {
+
+	-fx-cell-size: 38;
+}
+
+.table-row-cell:selected {
+
+	-fx-background-color: #DBEAFE;
+}
+
+.table-row-cell:hover {
+
+	-fx-background-color: #F3F4F6;
+}
+
+.table-cell {
+
+	-fx-border-color: transparent;
+
+	-fx-padding: 8;
+}
+
+
+/* ==========================================================================
+   Scrollbars
+   ========================================================================== */
+
+.scroll-bar {
+
+	-fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+
+	-fx-background-color: #CBD5E1;
+
+	-fx-background-radius: 10;
+}
+
+
+/* ==========================================================================
+   Shortcut Bar
+   ========================================================================== */
+
+.shortcut-bar {
+
+	-fx-background-color: white;
+
+	-fx-border-color: #E5E7EB;
+
+	-fx-border-width: 1 0 0 0;
+
+	-fx-min-height: 46;
+}
+
+.shortcut {
+
+	-fx-background-color: #EEF4FF;
+
+	-fx-background-radius: 6;
+
+	-fx-padding: 5 10;
+
+	-fx-font-size: 12px;
+
+	-fx-font-weight: bold;
+
+	-fx-text-fill: #2563EB;
+}
+
+.status-text {
+
+	-fx-text-fill: #6B7280;
+
+	-fx-font-size: 12px;
+}
+
+
+/* ==========================================================================
+   Focus Ring
+   ========================================================================== */
+
+*:focused {
+
+	-fx-focus-color: transparent;
+
+	-fx-faint-focus-color: transparent;
+}
+
+.text-field:focused,
+.combo-box:focused,
+.date-picker:focused,
+.table-view:focused,
+.button:focused {
+
+	-fx-effect: dropshadow(gaussian,
+			rgba(37, 99, 235, 0.25),
+			10,
+			0.2,
+			0,
+			0);
+}
