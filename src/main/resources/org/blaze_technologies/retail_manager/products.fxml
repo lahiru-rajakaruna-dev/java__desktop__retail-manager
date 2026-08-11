@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1" styleClass="products-root"
+	tabClosingPolicy="UNAVAILABLE">
+
+	<!-- ========================================================= -->
+	<!-- PRODUCTS -->
+	<!-- ========================================================= -->
+
+	<Tab text="Products" closable="false">
+
+		<BorderPane>
+
+			<!-- ================= HEADER ================= -->
+
+			<top>
+
+				<VBox spacing="14" styleClass="page-header">
+
+					<padding>
+						<Insets top="20" right="24" bottom="14" left="24" />
+					</padding>
+
+					<HBox alignment="CENTER_LEFT">
+
+						<VBox spacing="3">
+
+							<Label text="Products" styleClass="screen-title" />
+
+							<Label text="Manage products, pricing and stock"
+								styleClass="description" />
+
+						</VBox>
+
+						<Region HBox.hgrow="ALWAYS" />
+
+						<Label text="F2" styleClass="key-badge" />
+
+						<Label text="Add Product" styleClass="header-hint" />
+
+						<Label text="F6" styleClass="key-badge" />
+
+						<Label text="Stock" styleClass="header-hint" />
+
+					</HBox>
+
+
+					<!-- Search -->
+
+					<HBox spacing="10">
+
+						<TextField fx:id="productSearchField"
+							promptText="Search by name, code or barcode..."
+							HBox.hgrow="ALWAYS" focusTraversable="true"
+							styleClass="search-field" />
+
+						<Button text="Search" mnemonicParsing="false"
+							focusTraversable="true" styleClass="search-button" />
+
+					</HBox>
+
+				</VBox>
+
+			</top>
+
+
+			<!-- ================= PRODUCT TABLE ================= -->
+
+			<center>
+
+				<VBox VBox.vgrow="ALWAYS" styleClass="table-container">
+
+					<padding>
+						<Insets top="0" right="24" bottom="20" left="24" />
+					</padding>
+
+					<HBox alignment="CENTER_LEFT" spacing="10"
+						styleClass="table-toolbar">
+
+						<Label text="Products" styleClass="section-title" />
+
+						<Region HBox.hgrow="ALWAYS" />
+
+						<Label text="↑ ↓ Navigate" styleClass="keyboard-hint" />
+
+						<Label text="Enter Edit" styleClass="keyboard-hint" />
+
+					</HBox>
+
+
+					<TableView fx:id="productsTable" VBox.vgrow="ALWAYS"
+						focusTraversable="true" styleClass="products-table">
+
+						<columns>
+
+							<TableColumn fx:id="codeColumn" text="Code"
+								prefWidth="120" />
+
+							<TableColumn fx:id="nameColumn" text="Product"
+								prefWidth="260" />
+
+							<TableColumn fx:id="categoryColumn" text="Category"
+								prefWidth="170" />
+
+							<TableColumn fx:id="priceColumn" text="Selling Price"
+								prefWidth="130" />
+
+							<TableColumn fx:id="stockColumn" text="Stock"
+								prefWidth="100" />
+
+							<TableColumn fx:id="statusColumn" text="Status"
+								prefWidth="120" />
+
+						</columns>
+
+						<placeholder>
+
+							<VBox alignment="CENTER" spacing="8">
+
+								<Label text="No products found" styleClass="empty-title" />
+
+								<Label text="Press F2 to add a product"
+									styleClass="empty-description" />
+
+							</VBox>
+
+						</placeholder>
+
+					</TableView>
+
+				</VBox>
+
+			</center>
+
+
+			<!-- ================= FOOTER ================= -->
+
+			<bottom>
+
+				<HBox alignment="CENTER_LEFT" spacing="18" styleClass="footer">
+
+					<padding>
+						<Insets top="10" right="24" bottom="12" left="24" />
+					</padding>
+
+					<Label text="F2 Add" styleClass="footer-shortcut" />
+
+					<Label text="F4 Search" styleClass="footer-shortcut" />
+
+					<Label text="F6 Stock" styleClass="footer-shortcut" />
+
+					<Label text="Enter Edit" styleClass="footer-shortcut" />
+
+					<Label text="Delete Remove" styleClass="footer-shortcut" />
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Label text="C Categories" styleClass="footer-shortcut" />
+
+					<Label text="Esc Back" styleClass="footer-shortcut" />
+
+				</HBox>
+
+			</bottom>
+
+		</BorderPane>
+
+	</Tab>
+
+
+	<!-- ========================================================= -->
+	<!-- CATEGORIES -->
+	<!-- ========================================================= -->
+
+	<Tab text="Categories" closable="false">
+
+		<BorderPane>
+
+			<!-- Header -->
+
+			<top>
+
+				<HBox alignment="CENTER_LEFT" styleClass="page-header">
+
+					<padding>
+						<Insets top="20" right="24" bottom="20" left="24" />
+					</padding>
+
+					<VBox spacing="3">
+
+						<Label text="Categories" styleClass="screen-title" />
+
+						<Label text="Organize products into categories"
+							styleClass="description" />
+
+					</VBox>
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Label text="F2" styleClass="key-badge" />
+
+					<Label text="Add Category" styleClass="header-hint" />
+
+				</HBox>
+
+			</top>
+
+
+			<!-- Category list -->
+
+			<center>
+
+				<VBox VBox.vgrow="ALWAYS" styleClass="table-container">
+
+					<padding>
+						<Insets top="0" right="24" bottom="20" left="24" />
+					</padding>
+
+					<TableView fx:id="categoriesTable" VBox.vgrow="ALWAYS"
+						focusTraversable="true" styleClass="products-table">
+
+						<columns>
+
+							<TableColumn fx:id="categoryNameColumn"
+								text="Category" prefWidth="320" />
+
+							<TableColumn fx:id="categoryCodeColumn" text="Code"
+								prefWidth="160" />
+
+							<TableColumn fx:id="productCountColumn"
+								text="Products" prefWidth="130" />
+
+							<TableColumn fx:id="categoryStatusColumn"
+								text="Status" prefWidth="130" />
+
+						</columns>
+
+						<placeholder>
+
+							<Label text="No categories found"
+								styleClass="empty-description" />
+
+						</placeholder>
+
+					</TableView>
+
+				</VBox>
+
+			</center>
+
+
+			<!-- Footer -->
+
+			<bottom>
+
+				<HBox alignment="CENTER_LEFT" spacing="18" styleClass="footer">
+
+					<padding>
+						<Insets top="10" right="24" bottom="12" left="24" />
+					</padding>
+
+					<Label text="F2 Add" styleClass="footer-shortcut" />
+
+					<Label text="Enter Edit" styleClass="footer-shortcut" />
+
+					<Label text="Delete Remove" styleClass="footer-shortcut" />
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Label text="Esc Back" styleClass="footer-shortcut" />
+
+				</HBox>
+
+			</bottom>
+
+		</BorderPane>
+
+	</Tab>
+
+</TabPane>

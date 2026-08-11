@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1" styleClass="product-dialog">
+	<content>
+
+		<VBox spacing="18">
+
+			<padding>
+				<Insets top="24" right="26" bottom="10" left="26" />
+			</padding>
+
+
+			<!-- ================================================= -->
+			<!-- HEADER -->
+			<!-- ================================================= -->
+
+			<VBox spacing="3">
+
+				<Label fx:id="dialogTitle" text="Add Product"
+					styleClass="dialog-title" />
+
+				<Label text="Enter product information"
+					styleClass="dialog-description" />
+
+			</VBox>
+
+
+			<!-- ================================================= -->
+			<!-- FORM -->
+			<!-- ================================================= -->
+
+			<GridPane hgap="14" vgap="12">
+
+				<columnConstraints>
+
+					<ColumnConstraints minWidth="125" prefWidth="125" />
+
+					<ColumnConstraints hgrow="ALWAYS" />
+
+				</columnConstraints>
+
+
+				<!-- Product Name -->
+
+				<Label text="Product Name" GridPane.rowIndex="0"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<TextField fx:id="nameField" promptText="Product name"
+					focusTraversable="true" GridPane.rowIndex="0"
+					GridPane.columnIndex="1" styleClass="form-field" />
+
+
+				<!-- Product Code -->
+
+				<Label text="Product Code" GridPane.rowIndex="1"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<TextField fx:id="codeField"
+					promptText="Optional product code" focusTraversable="true"
+					GridPane.rowIndex="1" GridPane.columnIndex="1"
+					styleClass="form-field" />
+
+
+				<!-- Barcode -->
+
+				<Label text="Barcode" GridPane.rowIndex="2"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<TextField fx:id="barcodeField"
+					promptText="Scan or enter barcode" focusTraversable="true"
+					GridPane.rowIndex="2" GridPane.columnIndex="1"
+					styleClass="form-field" />
+
+
+				<!-- Category -->
+
+				<Label text="Category" GridPane.rowIndex="3"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<ComboBox fx:id="categoryComboBox"
+					promptText="Select category" maxWidth="Infinity"
+					focusTraversable="true" GridPane.rowIndex="3"
+					GridPane.columnIndex="1" styleClass="form-field" />
+
+
+				<!-- Cost Price -->
+
+				<Label text="Cost Price" GridPane.rowIndex="4"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<TextField fx:id="costPriceField" promptText="0.00"
+					focusTraversable="true" GridPane.rowIndex="4"
+					GridPane.columnIndex="1" styleClass="form-field" />
+
+
+				<!-- Selling Price -->
+
+				<Label text="Selling Price" GridPane.rowIndex="5"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<TextField fx:id="sellingPriceField" promptText="0.00"
+					focusTraversable="true" GridPane.rowIndex="5"
+					GridPane.columnIndex="1" styleClass="form-field" />
+
+
+				<!-- Opening Stock -->
+
+				<Label text="Opening Stock" GridPane.rowIndex="6"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<TextField fx:id="openingStockField" promptText="0"
+					focusTraversable="true" GridPane.rowIndex="6"
+					GridPane.columnIndex="1" styleClass="form-field" />
+
+
+				<!-- Low Stock -->
+
+				<Label text="Low Stock At" GridPane.rowIndex="7"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<TextField fx:id="lowStockField" promptText="0"
+					focusTraversable="true" GridPane.rowIndex="7"
+					GridPane.columnIndex="1" styleClass="form-field" />
+
+			</GridPane>
+
+
+			<!-- ================================================= -->
+			<!-- KEYBOARD HELP -->
+			<!-- ================================================= -->
+
+			<HBox alignment="CENTER_LEFT" spacing="14"
+				styleClass="dialog-hints">
+
+				<Label text="Tab" styleClass="key-small" />
+
+				<Label text="Next" styleClass="hint-text" />
+
+				<Label text="Shift+Tab" styleClass="key-small" />
+
+				<Label text="Previous" styleClass="hint-text" />
+
+				<Region HBox.hgrow="ALWAYS" />
+
+				<Label text="Ctrl+S" styleClass="key-small" />
+
+				<Label text="Save" styleClass="hint-text" />
+
+				<Label text="Esc" styleClass="key-small" />
+
+				<Label text="Cancel" styleClass="hint-text" />
+
+			</HBox>
+
+		</VBox>
+
+	</content>
+
+
+	<!-- ========================================================= -->
+	<!-- BUTTONS -->
+	<!-- ========================================================= -->
+
+	<buttonTypes>
+		<ButtonType fx:constant="CANCEL" />
+		<ButtonType fx:constant="OK" />
+	</buttonTypes>
+</DialogPane>

@@ -1,0 +1,478 @@
+/* ============================================================
+ROOT
+============================================================ */
+
+.products-root {
+	-fx-background-color: #F5F6F8;
+	-fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ============================================================
+HEADER
+============================================================ */
+
+.page-header {
+	-fx-background-color: transparent;
+}
+
+.screen-title {
+	-fx-font-size: 25.0px;
+	-fx-font-weight: 700.0;
+	-fx-text-fill: #17191C;
+}
+
+.description {
+	-fx-font-size: 12.0px;
+	-fx-text-fill: #8A8F98;
+}
+
+.header-hint {
+	-fx-font-size: 11.0px;
+	-fx-text-fill: #858A93;
+}
+
+/* ============================================================
+KEY BADGES
+============================================================ */
+
+.key-badge {
+	-fx-background-color: #E9EBEE;
+
+	-fx-background-radius: 6.0px;
+
+	-fx-padding: 4.0px 7.0px;
+
+	-fx-font-size: 10.0px;
+	-fx-font-weight: 700.0;
+
+	-fx-text-fill: #5F646D;
+
+}
+
+/* ============================================================
+SEARCH
+============================================================ */
+
+.search-field {
+	-fx-background-color: #FFFFFF;
+
+	-fx-background-radius: 12.0px;
+
+	-fx-border-color: #E0E3E7;
+	-fx-border-radius: 12.0px;
+
+	-fx-padding: 11.0px 14.0px;
+
+	-fx-font-size: 13.0px;
+
+}
+
+.search-field:focused {
+	-fx-border-color: #5B7CFA;
+	-fx-border-width: 2.0px;
+}
+
+.search-button {
+	-fx-background-color: #20242A;
+
+	-fx-background-radius: 12.0px;
+
+	-fx-padding: 11.0px 20.0px;
+
+	-fx-font-size: 12.0px;
+	-fx-font-weight: 700.0;
+
+	-fx-text-fill: white;
+
+}
+
+.search-button:hover {
+	-fx-background-color: #111418;
+}
+
+.search-button:focused {
+	-fx-border-color: #5B7CFA;
+	-fx-border-width: 2.0px;
+	-fx-border-radius: 12.0px;
+}
+
+/* ============================================================
+TABLE AREA
+============================================================ */
+
+.table-container {
+	-fx-background-color: transparent;
+}
+
+.table-toolbar {
+	-fx-padding: 0.0 0.0 10.0px 0.0;
+}
+
+.section-title {
+	-fx-font-size: 15.0px;
+	-fx-font-weight: 700.0;
+
+	-fx-text-fill: #202328;
+
+}
+
+.keyboard-hint {
+	-fx-font-size: 11.0px;
+	-fx-text-fill: #9A9EA6;
+}
+
+/* ============================================================
+PRODUCT TABLE
+============================================================ */
+
+.products-table {
+	-fx-background-color: #FFFFFF;
+
+	-fx-background-radius: 18.0px;
+
+	-fx-border-color: transparent;
+
+	-fx-table-cell-border-color: transparent;
+
+	-fx-padding: 5.0px;
+
+}
+
+.products-table .column-header-background {
+	-fx-background-color: #F7F8FA;
+
+	-fx-background-radius: 12.0px;
+
+}
+
+.products-table .column-header {
+	-fx-background-color: transparent;
+
+	-fx-padding: 11.0px;
+
+}
+
+.products-table .column-header .label {
+	-fx-font-size: 11.0px;
+	-fx-font-weight: 700.0;
+
+	-fx-text-fill: #858A93;
+
+}
+
+.products-table .table-row-cell {
+	-fx-background-color: transparent;
+
+	-fx-cell-size: 46.0px;
+
+}
+
+.products-table .table-row-cell:selected {
+	-fx-background-color: #EAF0FF;
+
+	-fx-background-radius: 9.0px;
+
+}
+
+.products-table .table-row-cell:focused:selected {
+	-fx-background-color: #DDE7FF;
+
+	-fx-border-color: #5B7CFA;
+	-fx-border-width: 0.0 0.0 0.0 2.0px;
+
+}
+
+.products-table .table-cell {
+	-fx-border-color: transparent;
+
+	-fx-padding: 0.0 10.0px;
+
+	-fx-font-size: 13.0px;
+
+	-fx-text-fill: #34383E;
+
+}
+
+/* ============================================================
+EMPTY STATE
+============================================================ */
+
+.empty-title {
+	-fx-font-size: 14.0px;
+	-fx-font-weight: 700.0;
+
+	-fx-text-fill: #747983;
+
+}
+
+.empty-description {
+	-fx-font-size: 12.0px;
+
+	-fx-text-fill: #A0A4AB;
+
+}
+
+/* ============================================================
+FOOTER
+============================================================ */
+
+.footer {
+	-fx-background-color: #FFFFFF;
+
+	-fx-border-color: #E7E9EC transparent transparent transparent;
+
+}
+
+.footer-shortcut {
+	-fx-font-size: 11.0px;
+
+	-fx-text-fill: #777C85;
+
+}
+
+/* ============================================================
+GENERAL FOCUS
+============================================================ */
+
+.button:focused {
+	-fx-border-color: #5B7CFA;
+	-fx-border-width: 2.0px;
+}
+
+.text-field:focused {
+	-fx-border-color: #5B7CFA;
+	-fx-border-width: 2.0px;
+}
+
+
+/* ============================================================
+PRODUCT / STOCK DIALOGS
+============================================================ */
+
+.product-dialog,
+.stock-dialog {
+-fx-background-color: #FFFFFF;
+}
+
+/* ============================================================
+DIALOG TYPOGRAPHY
+============================================================ */
+
+.dialog-title {
+-fx-font-size: 21.0px;
+-fx-font-weight: 700.0;
+
+
+-fx-text-fill: #17191C;
+
+
+}
+
+.dialog-description {
+-fx-font-size: 12.0px;
+
+
+-fx-text-fill: #8A8F98;
+
+
+}
+
+.field-label {
+-fx-font-size: 12.0px;
+-fx-font-weight: 600.0;
+
+
+-fx-text-fill: #555A63;
+
+
+}
+
+/* ============================================================
+FORM FIELDS
+============================================================ */
+
+.form-field {
+-fx-background-color: #F5F6F8;
+
+
+-fx-background-radius: 10.0px;
+
+-fx-border-color: transparent;
+-fx-border-radius: 10.0px;
+
+-fx-padding: 10.0px 12.0px;
+
+-fx-font-size: 13.0px;
+
+
+}
+
+.form-field:focused {
+-fx-background-color: #FFFFFF;
+
+
+-fx-border-color: #5B7CFA;
+-fx-border-width: 2.0px;
+
+-fx-border-radius: 10.0px;
+
+
+}
+
+/* ============================================================
+PRODUCT SUMMARY
+============================================================ */
+
+.product-summary {
+-fx-background-color: #F7F8FA;
+
+
+-fx-background-radius: 12.0px;
+
+-fx-padding: 14.0px;
+
+
+}
+
+.summary-label {
+-fx-font-size: 12.0px;
+
+
+-fx-text-fill: #858A93;
+
+
+}
+
+.summary-value {
+-fx-font-size: 13.0px;
+-fx-font-weight: 600.0;
+
+
+-fx-text-fill: #34383E;
+
+
+}
+
+.stock-value {
+-fx-font-size: 16.0px;
+-fx-font-weight: 700.0;
+
+
+-fx-text-fill: #17191C;
+
+
+}
+
+/* ============================================================
+NEW STOCK
+============================================================ */
+
+.new-stock-panel {
+-fx-background-color: #F0F4FF;
+
+
+-fx-background-radius: 12.0px;
+
+-fx-padding: 14.0px;
+
+
+}
+
+.new-stock-label {
+-fx-font-size: 11.0px;
+-fx-font-weight: 600.0;
+
+
+-fx-text-fill: #68728A;
+
+
+}
+
+.new-stock-value {
+-fx-font-size: 28.0px;
+-fx-font-weight: 700.0;
+
+
+-fx-text-fill: #17191C;
+
+
+}
+
+/* ============================================================
+DIALOG BUTTONS
+============================================================ */
+
+.product-dialog .button,
+.stock-dialog .button {
+-fx-background-radius: 10.0px;
+
+
+-fx-padding: 9.0px 18.0px;
+
+-fx-font-size: 12.0px;
+-fx-font-weight: 600.0;
+
+
+}
+
+.product-dialog .button:default,
+.stock-dialog .button:default {
+-fx-background-color: #2563EB;
+
+
+-fx-text-fill: white;
+
+
+}
+
+.product-dialog .button:default:hover,
+.stock-dialog .button:default:hover {
+-fx-background-color: #1D4ED8;
+}
+
+.product-dialog .button:cancel,
+.stock-dialog .button:cancel {
+-fx-background-color: #F0F1F3;
+
+
+-fx-text-fill: #4B5058;
+
+
+}
+
+.product-dialog .button:focused,
+.stock-dialog .button:focused {
+-fx-border-color: #5B7CFA;
+-fx-border-width: 2.0px;
+-fx-border-radius: 10.0px;
+}
+
+/* ============================================================
+KEYBOARD HINTS
+============================================================ */
+
+.dialog-hints {
+-fx-padding: 4.0px 0.0 0.0 0.0;
+}
+
+.key-small {
+-fx-background-color: #ECEEF1;
+
+
+-fx-background-radius: 5.0px;
+
+-fx-padding: 3.0px 6.0px;
+
+-fx-font-size: 10.0px;
+-fx-font-weight: 700.0;
+
+-fx-text-fill: #626771;
+
+
+}
+
+.hint-text {
+-fx-font-size: 10.0px;
+
+-fx-text-fill: #92969E;
+}
