@@ -1,0 +1,399 @@
+/* ============================================================
+ROOT
+============================================================ */
+
+.sales-root {
+	-fx-background-color: #F5F6F8;
+	-fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ============================================================
+HEADER
+============================================================ */
+
+.pos-header,
+.history-header {
+	-fx-background-color: transparent;
+}
+
+.screen-title {
+	-fx-font-size: 25px;
+	-fx-font-weight: 700;
+	-fx-text-fill: #17191C;
+}
+
+.invoice-label,
+.history-description {
+	-fx-font-size: 12px;
+	-fx-text-fill: #8A8F98;
+}
+
+.header-hint {
+	-fx-font-size: 11px;
+	-fx-text-fill: #858A93;
+}
+
+/* ============================================================
+CARDS
+============================================================ */
+
+.card {
+	-fx-background-color: #FFFFFF;
+
+	-fx-background-radius: 20px;
+	-fx-border-radius: 20px;
+
+	-fx-padding: 20px;
+
+	-fx-effect:
+		dropshadow(gaussian,
+			rgba(0, 0, 0, 0.055),
+			18,
+			0.12,
+			0,
+			4);
+
+}
+
+/* ============================================================
+SECTIONS
+============================================================ */
+
+.section-title {
+	-fx-font-size: 16px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: #202328;
+
+}
+
+.keyboard-hint {
+	-fx-font-size: 11px;
+	-fx-text-fill: #9A9EA6;
+}
+
+/* ============================================================
+KEY BADGES
+============================================================ */
+
+.key-badge {
+	-fx-background-color: #E9EBEE;
+
+	-fx-background-radius: 6px;
+
+	-fx-padding: 4px 7px;
+
+	-fx-font-size: 10px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: #5F646D;
+
+}
+
+.key-badge-light {
+	-fx-background-color: rgba(255, 255, 255, 0.18);
+
+	-fx-background-radius: 6px;
+
+	-fx-padding: 4px 7px;
+
+	-fx-font-size: 10px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: white;
+
+}
+
+/* ============================================================
+CART TABLE
+============================================================ */
+
+.cart-table,
+.history-table {
+	-fx-background-color: transparent;
+
+	-fx-border-color: transparent;
+
+	-fx-table-cell-border-color: transparent;
+
+}
+
+.cart-table .column-header-background,
+.history-table .column-header-background {
+	-fx-background-color: #F7F8FA;
+
+	-fx-background-radius: 10px;
+
+}
+
+.cart-table .column-header,
+.history-table .column-header {
+	-fx-background-color: transparent;
+
+	-fx-padding: 10px;
+
+}
+
+.cart-table .column-header .label,
+.history-table .column-header .label {
+	-fx-font-size: 11px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: #858A93;
+
+}
+
+.cart-table .table-row-cell,
+.history-table .table-row-cell {
+	-fx-background-color: transparent;
+
+	-fx-cell-size: 46px;
+
+}
+
+.cart-table .table-row-cell:selected,
+.history-table .table-row-cell:selected {
+	-fx-background-color: #EAF0FF;
+
+	-fx-background-radius: 9px;
+
+}
+
+.cart-table .table-row-cell:focused:selected,
+.history-table .table-row-cell:focused:selected {
+	-fx-background-color: #DDE7FF;
+}
+
+.cart-table .table-cell,
+.history-table .table-cell {
+	-fx-border-color: transparent;
+
+	-fx-padding: 0 10px;
+
+	-fx-font-size: 13px;
+
+	-fx-text-fill: #34383E;
+
+}
+
+/* ============================================================
+EMPTY STATE
+============================================================ */
+
+.empty-title {
+	-fx-font-size: 14px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: #747983;
+
+}
+
+.empty-description {
+	-fx-font-size: 12px;
+	-fx-text-fill: #A0A4AB;
+}
+
+/* ============================================================
+CART FOOTER
+============================================================ */
+
+.cart-footer {
+	-fx-padding: 4px 0 0 0;
+}
+
+.shortcut-label {
+	-fx-font-size: 10px;
+	-fx-text-fill: #92969E;
+}
+
+/* ============================================================
+SALE SUMMARY
+============================================================ */
+
+.summary-panel {
+	-fx-min-width: 280px;
+}
+
+.summary-label {
+	-fx-font-size: 13px;
+	-fx-text-fill: #777C85;
+}
+
+.summary-amount {
+	-fx-font-size: 13px;
+	-fx-font-weight: 600;
+
+	-fx-text-fill: #33373D;
+
+}
+
+.total-caption {
+	-fx-font-size: 11px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: #858A93;
+
+}
+
+.total-value {
+	-fx-font-size: 34px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: #17191C;
+
+}
+
+/* ============================================================
+PAYMENT BUTTON
+============================================================ */
+
+.payment-button {
+	-fx-background-color: #F0F2F5;
+
+	-fx-background-radius: 13px;
+
+	-fx-padding: 13px;
+
+	-fx-font-size: 13px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: #30343A;
+
+}
+
+.payment-button:hover {
+	-fx-background-color: #E7E9ED;
+}
+
+.payment-button:focused {
+	-fx-background-color: #E7EDFF;
+
+	-fx-border-color: #5B7CFA;
+	-fx-border-width: 2px;
+
+	-fx-border-radius: 13px;
+
+}
+
+/* ============================================================
+COMPLETE SALE
+============================================================ */
+
+.complete-button {
+	-fx-background-color: #2563EB;
+
+	-fx-background-radius: 13px;
+
+	-fx-padding: 14px;
+
+	-fx-font-size: 14px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: white;
+
+}
+
+.complete-button:hover {
+	-fx-background-color: #1D4ED8;
+}
+
+.complete-button:focused {
+	-fx-background-color: #1D4ED8;
+
+	-fx-border-color: #111827;
+	-fx-border-width: 2px;
+
+	-fx-border-radius: 13px;
+
+}
+
+.complete-hint {
+	-fx-alignment: CENTER;
+
+	-fx-font-size: 10px;
+
+	-fx-text-fill: #9A9EA6;
+
+}
+
+/* ============================================================
+SEARCH
+============================================================ */
+
+.search-field {
+	-fx-background-color: #FFFFFF;
+
+	-fx-background-radius: 12px;
+
+	-fx-border-color: #E0E3E7;
+	-fx-border-radius: 12px;
+
+	-fx-padding: 11px 14px;
+
+	-fx-font-size: 13px;
+
+}
+
+.search-field:focused {
+	-fx-border-color: #5B7CFA;
+
+	-fx-border-width: 2px;
+
+}
+
+.search-button {
+	-fx-background-color: #20242A;
+
+	-fx-background-radius: 12px;
+
+	-fx-padding: 11px 20px;
+
+	-fx-font-size: 12px;
+	-fx-font-weight: 700;
+
+	-fx-text-fill: white;
+
+}
+
+.search-button:hover {
+	-fx-background-color: #111418;
+}
+
+/* ============================================================
+HISTORY
+============================================================ */
+
+.history-container {
+	-fx-background-color: transparent;
+}
+
+/* ============================================================
+FOOTER
+============================================================ */
+
+.footer {
+	-fx-background-color: #FFFFFF;
+
+	-fx-border-color: #E7E9EC transparent transparent transparent;
+
+}
+
+.footer-shortcut {
+	-fx-font-size: 11px;
+
+	-fx-text-fill: #777C85;
+
+}
+
+/* ============================================================
+FOCUS
+============================================================ */
+
+.button:focused {
+	-fx-border-color: #5B7CFA;
+	-fx-border-width: 2px;
+}
+
+.text-field:focused {
+	-fx-border-color: #5B7CFA;
+}

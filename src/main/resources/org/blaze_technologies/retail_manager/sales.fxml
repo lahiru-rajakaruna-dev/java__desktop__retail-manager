@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1" 
+	styleClass="sales-root" tabClosingPolicy="UNAVAILABLE">
+
+	<!-- ========================================================= -->
+	<!-- NEW SALE / POS -->
+	<!-- ========================================================= -->
+
+	<Tab text="New Sale" closable="false">
+
+		<BorderPane>
+
+			<!-- ================================================= -->
+			<!-- POS HEADER -->
+			<!-- ================================================= -->
+
+			<top>
+
+				<HBox alignment="CENTER_LEFT" spacing="16"
+					styleClass="pos-header">
+
+					<padding>
+						<Insets top="18" right="24" bottom="18" left="24" />
+					</padding>
+
+					<VBox spacing="2">
+
+						<Label text="New Sale" styleClass="screen-title" />
+
+						<Label text="Invoice #000124" styleClass="invoice-label" />
+
+					</VBox>
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Label text="F4" styleClass="key-badge" />
+
+					<Label text="Search Product" styleClass="header-hint" />
+
+					<Label text="F8" styleClass="key-badge" />
+
+					<Label text="Payment" styleClass="header-hint" />
+
+				</HBox>
+
+			</top>
+
+
+			<!-- ================================================= -->
+			<!-- POS CONTENT -->
+			<!-- ================================================= -->
+
+			<center>
+
+				<HBox spacing="18">
+
+					<padding>
+						<Insets top="0" right="24" bottom="20" left="24" />
+					</padding>
+
+
+					<!-- ========================================= -->
+					<!-- CART -->
+					<!-- ========================================= -->
+
+					<VBox HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" spacing="12"
+						styleClass="card">
+
+						<HBox alignment="CENTER_LEFT">
+
+							<Label text="Items" styleClass="section-title" />
+
+							<Region HBox.hgrow="ALWAYS" />
+
+							<Label text="↑ ↓ Navigate" styleClass="keyboard-hint" />
+
+						</HBox>
+
+
+						<TableView fx:id="cartTable" VBox.vgrow="ALWAYS"
+							focusTraversable="true" styleClass="cart-table">
+
+							<columns>
+
+								<TableColumn fx:id="productColumn" text="Product"
+									prefWidth="260" />
+
+								<TableColumn fx:id="quantityColumn" text="Qty"
+									prefWidth="70" />
+
+								<TableColumn fx:id="priceColumn" text="Price"
+									prefWidth="110" />
+
+								<TableColumn fx:id="totalColumn" text="Total"
+									prefWidth="130" />
+
+							</columns>
+
+							<placeholder>
+
+								<VBox alignment="CENTER" spacing="8">
+
+									<Label text="No items" styleClass="empty-title" />
+
+									<Label text="Press F4 to search for a product"
+										styleClass="empty-description" />
+
+								</VBox>
+
+							</placeholder>
+
+						</TableView>
+
+
+						<!-- Cart shortcuts -->
+
+						<HBox spacing="16" styleClass="cart-footer">
+
+							<Label text="F4 Search" styleClass="shortcut-label" />
+
+							<Label text="Delete Remove" styleClass="shortcut-label" />
+
+							<Label text="Enter Edit Qty" styleClass="shortcut-label" />
+
+						</HBox>
+
+					</VBox>
+
+
+					<!-- ========================================= -->
+					<!-- SALE SUMMARY -->
+					<!-- ========================================= -->
+
+					<VBox prefWidth="310" spacing="16"
+						styleClass="card summary-panel">
+
+						<Label text="Sale Summary" styleClass="section-title" />
+
+
+						<VBox spacing="10">
+
+							<HBox>
+
+								<Label text="Subtotal" styleClass="summary-label" />
+
+								<Region HBox.hgrow="ALWAYS" />
+
+								<Label text="\$0.00" fx:id="subtotalLabel"
+									styleClass="summary-amount" />
+
+							</HBox>
+
+
+							<HBox>
+
+								<Label text="Discount" styleClass="summary-label" />
+
+								<Region HBox.hgrow="ALWAYS" />
+
+								<Label text="\$0.00" fx:id="discountLabel"
+									styleClass="summary-amount" />
+
+							</HBox>
+
+
+							<HBox>
+
+								<Label text="Tax" styleClass="summary-label" />
+
+								<Region HBox.hgrow="ALWAYS" />
+
+								<Label text="\$0.00" fx:id="taxLabel"
+									styleClass="summary-amount" />
+
+							</HBox>
+
+						</VBox>
+
+
+						<Separator />
+
+
+						<VBox spacing="4">
+
+							<Label text="TOTAL" styleClass="total-caption" />
+
+							<Label text="\$0.00" fx:id="totalLabel"
+								styleClass="total-value" />
+
+						</VBox>
+
+
+						<Region VBox.vgrow="ALWAYS" />
+
+
+						<!-- Payment -->
+
+						<Button text="Payment" mnemonicParsing="false"
+							maxWidth="Infinity" focusTraversable="true"
+							styleClass="payment-button">
+
+							<graphic>
+
+								<Label text="F8" styleClass="key-badge-light" />
+
+							</graphic>
+
+						</Button>
+
+
+						<!-- Complete -->
+
+						<Button text="Complete Sale" mnemonicParsing="false"
+							maxWidth="Infinity" focusTraversable="true"
+							styleClass="complete-button" />
+
+
+						<Label text="Ctrl + Enter" styleClass="complete-hint" />
+
+					</VBox>
+
+				</HBox>
+
+			</center>
+
+
+			<!-- ================================================= -->
+			<!-- POS FOOTER -->
+			<!-- ================================================= -->
+
+			<bottom>
+
+				<HBox spacing="18" alignment="CENTER_LEFT" styleClass="footer">
+
+					<padding>
+						<Insets top="10" right="24" bottom="12" left="24" />
+					</padding>
+
+					<Label text="F4 Search" styleClass="footer-shortcut" />
+
+					<Label text="F8 Payment" styleClass="footer-shortcut" />
+
+					<Label text="Delete Remove" styleClass="footer-shortcut" />
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Label text="Ctrl+Enter Complete"
+						styleClass="footer-shortcut" />
+
+					<Label text="Esc Cancel" styleClass="footer-shortcut" />
+
+				</HBox>
+
+			</bottom>
+
+		</BorderPane>
+
+	</Tab>
+
+
+	<!-- ========================================================= -->
+	<!-- SALES HISTORY -->
+	<!-- ========================================================= -->
+
+	<Tab text="Sales History" closable="false">
+
+		<BorderPane>
+
+			<!-- Header -->
+
+			<top>
+
+				<VBox spacing="14" styleClass="history-header">
+
+					<padding>
+						<Insets top="20" right="24" bottom="14" left="24" />
+					</padding>
+
+					<HBox alignment="CENTER_LEFT">
+
+						<VBox spacing="3">
+
+							<Label text="Sales History" styleClass="screen-title" />
+
+							<Label text="View and manage completed sales"
+								styleClass="history-description" />
+
+						</VBox>
+
+						<Region HBox.hgrow="ALWAYS" />
+
+						<Label text="F3" styleClass="key-badge" />
+
+						<Label text="New Sale" styleClass="header-hint" />
+
+					</HBox>
+
+
+					<!-- Search -->
+
+					<HBox spacing="10">
+
+						<TextField fx:id="salesSearchField"
+							promptText="Search invoice, customer or product..."
+							HBox.hgrow="ALWAYS" focusTraversable="true"
+							styleClass="search-field" />
+
+						<Button text="Search" mnemonicParsing="false"
+							focusTraversable="true" styleClass="search-button" />
+
+					</HBox>
+
+				</VBox>
+
+			</top>
+
+
+			<!-- History table -->
+
+			<center>
+
+				<VBox styleClass="history-container">
+
+					<padding>
+						<Insets top="0" right="24" bottom="20" left="24" />
+					</padding>
+
+					<TableView fx:id="salesHistoryTable" VBox.vgrow="ALWAYS"
+						focusTraversable="true" styleClass="history-table">
+
+						<columns>
+
+							<TableColumn fx:id="historyInvoiceColumn"
+								text="Invoice" prefWidth="130" />
+
+							<TableColumn fx:id="historyDateColumn" text="Date"
+								prefWidth="160" />
+
+							<TableColumn fx:id="historyCustomerColumn"
+								text="Customer" prefWidth="220" />
+
+							<TableColumn fx:id="historyAmountColumn"
+								text="Amount" prefWidth="130" />
+
+							<TableColumn fx:id="historyPaymentColumn"
+								text="Payment" prefWidth="130" />
+
+							<TableColumn fx:id="historyStatusColumn"
+								text="Status" prefWidth="110" />
+
+						</columns>
+
+						<placeholder>
+
+							<Label text="No sales found" styleClass="empty-description" />
+
+						</placeholder>
+
+					</TableView>
+
+				</VBox>
+
+			</center>
+
+
+			<!-- History footer -->
+
+			<bottom>
+
+				<HBox alignment="CENTER_LEFT" spacing="18" styleClass="footer">
+
+					<padding>
+						<Insets top="10" right="24" bottom="12" left="24" />
+					</padding>
+
+					<Label text="↑ ↓ Navigate" styleClass="footer-shortcut" />
+
+					<Label text="Enter Details" styleClass="footer-shortcut" />
+
+					<Label text="R Return" styleClass="footer-shortcut" />
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Label text="Esc Back" styleClass="footer-shortcut" />
+
+				</HBox>
+
+			</bottom>
+
+		</BorderPane>
+
+	</Tab>
+
+</TabPane>
