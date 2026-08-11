@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1" prefWidth="1200" prefHeight="700"
+	styleClass="root"
+	fx:controller="org.blaze_technologies.retail_manager.controllers.AuthController">
+	<HBox maxWidth="980" maxHeight="560" spacing="28"
+		alignment="CENTER">
+
+		<VBox HBox.hgrow="ALWAYS" spacing="22"
+			styleClass="bento-card branding-card" alignment="TOP_LEFT">
+
+			<padding>
+				<Insets top="40" right="40" bottom="40" left="40" />
+			</padding>
+
+			<Label text="RetailOS" styleClass="logo" />
+
+			<Region VBox.vgrow="ALWAYS" />
+
+			<Label text="Retail Shop Management" wrapText="true"
+				styleClass="headline" />
+
+			<Label
+				text="Manage inventory, sales, debtors, suppliers and reporting from one elegant desktop application."
+				wrapText="true" styleClass="description" />
+
+			<Region VBox.vgrow="ALWAYS" />
+
+			<HBox spacing="14">
+
+				<VBox styleClass="mini-card">
+					<Label text="Inventory" styleClass="mini-title" />
+					<Label text="Real-time stock" styleClass="mini-text" />
+				</VBox>
+
+				<VBox styleClass="mini-card">
+					<Label text="Sales" styleClass="mini-title" />
+					<Label text="Fast checkout" styleClass="mini-text" />
+				</VBox>
+
+			</HBox>
+
+		</VBox>
+
+		<VBox prefWidth="370" alignment="CENTER" spacing="22"
+			styleClass="bento-card login-card">
+
+			<padding>
+				<Insets top="40" right="40" bottom="40" left="40" />
+			</padding>
+
+			<Label text="Welcome Back" styleClass="login-title" />
+
+			<Label text="Sign in to continue" styleClass="login-subtitle" />
+
+			<VBox spacing="16">
+
+				<TextField fx:id="usernameField" promptText="Username"
+					onAction="#getUserName" />
+
+				<PasswordField fx:id="passwordField"
+					promptText="Password" onAction="#getPassword" />
+
+			</VBox>
+
+			<CheckBox text="Remember me" focusTraversable="false" />
+
+			<Button text="Sign In" maxWidth="Infinity"
+				styleClass="primary-button" fx:id="loginButton"
+				onAction="#authenticate" />
+
+			<Button text="Sign Up" maxWidth="Infinity"
+				styleClass="secondary-button" fx:id="signupButton" onAction="#signup" />
+
+			<Hyperlink text="Forgot password?" />
+
+			<Region VBox.vgrow="ALWAYS" />
+
+			<Separator />
+
+			<Label text="Version 1.0" styleClass="footer" />
+
+		</VBox>
+
+	</HBox>
+
+</StackPane>
