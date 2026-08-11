@@ -1,0 +1,71 @@
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<HBox xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1" styleClass="tab-bar"
+	fx:controller="org.blaze_technologies.retail_manager.controllers.TabbarController"
+	fx:id="tabbar">
+
+	<Button fx:id="dashboardTab" text="Dashboard"
+		mnemonicParsing="false" focusTraversable="false"
+		styleClass="tab-button active-tab" onAction="#switchToDashboard">
+
+		<graphic>
+			<Label text="F1" styleClass="shortcut-badge" />
+		</graphic>
+
+	</Button>
+
+	<Button fx:id="salesTab" text="Sales" mnemonicParsing="false"
+		focusTraversable="false" styleClass="tab-button"
+		onAction="#switchToSales">
+
+		<graphic>
+			<Label text="F2" styleClass="shortcut-badge" />
+		</graphic>
+
+	</Button>
+
+	<Button fx:id="productsTab" text="Products"
+		mnemonicParsing="false" focusTraversable="false"
+		styleClass="tab-button" onAction="#switchToProducts">
+
+		<graphic>
+			<Label text="F3" styleClass="shortcut-badge" />
+		</graphic>
+
+	</Button>
+
+	<Button fx:id="customersTab" text="Customers"
+		mnemonicParsing="false" focusTraversable="false"
+		styleClass="tab-button" onAction="#switchToCustomers">
+
+		<graphic>
+			<Label text="F4" styleClass="shortcut-badge" />
+		</graphic>
+
+	</Button>
+
+	<Button fx:id="reportsTab" text="Reports"
+		mnemonicParsing="false" focusTraversable="false"
+		styleClass="tab-button" onAction="#switchToReports">
+
+		<graphic>
+			<Label text="F5" styleClass="shortcut-badge" />
+		</graphic>
+
+	</Button>
+
+	<Button fx:id="settingsTab" text="Settings"
+		mnemonicParsing="false" focusTraversable="false"
+		styleClass="tab-button" onAction="#switchToSettings">
+
+		<graphic>
+			<Label text="F6" styleClass="shortcut-badge" />
+		</graphic>
+
+	</Button>
+
+	<Region HBox.hgrow="ALWAYS" />
+
+</HBox>
