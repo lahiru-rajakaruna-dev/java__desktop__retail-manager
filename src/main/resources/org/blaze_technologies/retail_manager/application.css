@@ -1,0 +1,304 @@
+/* ==========================================================================
+   RETAIL MANAGER
+   Modern Keyboard-First Theme
+   ========================================================================== */
+
+/* ==========================================================================
+   Root
+   ========================================================================== */
+
+.root {
+    -fx-font-family: "Inter", "Segoe UI", "Arial";
+    -fx-font-size: 14px;
+
+    -fx-background-color: #F4F6F9;
+
+    -color-primary: #2563EB;
+    -color-primary-dark: #1D4ED8;
+
+    -color-bg: #F4F6F9;
+    -color-surface: #FFFFFF;
+
+    -color-border: #D9E1EC;
+
+    -color-text: #202124;
+    -color-text-light: #667085;
+
+    -color-shortcut: #EEF4FF;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.app-header {
+
+    -fx-background-color: white;
+
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -color-border;
+
+    -fx-min-height: 60;
+}
+
+.app-title {
+
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: -color-text;
+}
+
+.header-user {
+
+    -fx-text-fill: -color-text-light;
+
+    -fx-font-size: 13px;
+}
+
+
+/* ==========================================================================
+   Tab Bar
+   ========================================================================== */
+
+.tab-bar {
+
+    -fx-background-color: white;
+
+    -fx-spacing: 8;
+
+    -fx-padding: 10 18 10 18;
+
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -color-border;
+}
+
+
+/* ==========================================================================
+   Module Buttons
+   ========================================================================== */
+
+.tab-button {
+
+    -fx-background-color: transparent;
+
+    -fx-background-radius: 10;
+
+    -fx-border-radius: 10;
+
+    -fx-padding: 10 18;
+
+    -fx-cursor: hand;
+
+    -fx-text-fill: -color-text;
+
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+
+    -fx-content-display: RIGHT;
+
+    -fx-graphic-text-gap: 10;
+}
+
+.tab-button:hover {
+
+    -fx-background-color: #EEF3FB;
+}
+
+.tab-button:focused {
+
+    -fx-background-color: #E3EEFF;
+
+    -fx-border-width: 2;
+
+    -fx-border-color: -color-primary;
+}
+
+.active-tab {
+
+    -fx-background-color: -color-primary;
+
+    -fx-text-fill: white;
+}
+
+.active-tab:hover {
+
+    -fx-background-color: -color-primary-dark;
+}
+
+
+/* ==========================================================================
+   Shortcut Badge
+   ========================================================================== */
+
+.shortcut-badge {
+
+    -fx-background-color: rgba(255,255,255,.18);
+
+    -fx-background-radius: 5;
+
+    -fx-padding: 2 6;
+
+    -fx-font-size: 11px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: white;
+}
+
+
+/* Inactive shortcut */
+
+.tab-button .shortcut-badge {
+
+    -fx-background-color: -color-shortcut;
+
+    -fx-text-fill: -color-primary;
+}
+
+.active-tab .shortcut-badge {
+
+    -fx-background-color: rgba(255,255,255,.18);
+
+    -fx-text-fill: white;
+}
+
+
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+.content-pane {
+
+    -fx-background-color: transparent;
+
+    -fx-padding: 18;
+}
+
+
+/* ==========================================================================
+   Status Bar
+   ========================================================================== */
+
+.status-bar {
+
+    -fx-background-color: white;
+
+    -fx-border-width: 1 0 0 0;
+
+    -fx-border-color: -color-border;
+
+    -fx-min-height: 42;
+}
+
+.status-shortcut {
+
+    -fx-background-color: #EEF3FB;
+
+    -fx-background-radius: 6;
+
+    -fx-padding: 4 10;
+
+    -fx-font-size: 12px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: -color-primary;
+}
+
+.status-text {
+
+    -fx-text-fill: -color-text-light;
+
+    -fx-font-size: 12px;
+}
+
+
+/* ==========================================================================
+   Generic Controls
+   ========================================================================== */
+
+.button {
+
+    -fx-background-radius: 8;
+
+    -fx-cursor: hand;
+}
+
+.text-field,
+.password-field,
+.combo-box,
+.date-picker {
+
+    -fx-background-color: white;
+
+    -fx-border-color: -color-border;
+
+    -fx-border-radius: 8;
+
+    -fx-background-radius: 8;
+
+    -fx-padding: 8 12;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused,
+.date-picker:focused {
+
+    -fx-border-color: -color-primary;
+
+    -fx-border-width: 2;
+}
+
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+.table-view {
+
+    -fx-background-color: white;
+
+    -fx-border-color: -color-border;
+
+    -fx-border-radius: 10;
+
+    -fx-background-radius: 10;
+}
+
+.table-view .column-header-background {
+
+    -fx-background-color: #F8FAFC;
+}
+
+.table-view .column-header {
+
+    -fx-background-color: transparent;
+
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:selected {
+
+    -fx-background-color: #DBEAFE;
+}
+
+
+/* ==========================================================================
+   Scrollbars
+   ========================================================================== */
+
+.scroll-bar {
+
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+
+    -fx-background-color: #C9D4E5;
+
+    -fx-background-radius: 20;
+}
