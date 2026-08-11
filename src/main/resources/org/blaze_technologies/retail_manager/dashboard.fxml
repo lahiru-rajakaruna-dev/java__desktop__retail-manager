@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1" styleClass="root">
+
+	<!-- ===================================================== -->
+	<!-- HEADER -->
+	<!-- ===================================================== -->
+
+	<top>
+
+		<HBox alignment="CENTER_LEFT" spacing="20" styleClass="header">
+
+			<padding>
+				<Insets top="20" right="28" bottom="18" left="28" />
+			</padding>
+
+			<VBox spacing="3">
+
+				<Label text="Dashboard" styleClass="page-title" />
+
+				<Label text="Thursday, July 30" styleClass="date-label" />
+
+			</VBox>
+
+			<Region HBox.hgrow="ALWAYS" />
+
+			<Label text="Ctrl+K" styleClass="shortcut-hint" />
+
+			<Label text="Command" styleClass="command-label" />
+
+		</HBox>
+
+	</top>
+
+
+	<!-- ===================================================== -->
+	<!-- MAIN -->
+	<!-- ===================================================== -->
+
+	<center>
+
+		<VBox spacing="20">
+
+			<padding>
+				<Insets top="0" right="28" bottom="28" left="28" />
+			</padding>
+
+
+			<!-- ================================================= -->
+			<!-- SUMMARY -->
+			<!-- ================================================= -->
+
+			<HBox spacing="16">
+
+				<!-- Today's Sales -->
+
+				<VBox HBox.hgrow="ALWAYS" styleClass="card summary-card">
+
+					<Label text="Today's Sales" styleClass="card-label" />
+
+					<Region VBox.vgrow="ALWAYS" />
+
+					<Label text="\$12,450.00" styleClass="summary-value" />
+
+					<Label text="24 transactions" styleClass="secondary-label" />
+
+				</VBox>
+
+
+				<!-- Outstanding Debts -->
+
+				<VBox HBox.hgrow="ALWAYS" styleClass="card summary-card">
+
+					<Label text="Outstanding Debts" styleClass="card-label" />
+
+					<Region VBox.vgrow="ALWAYS" />
+
+					<Label text="\$3,210.00" styleClass="summary-value" />
+
+					<Label text="8 customers" styleClass="secondary-label" />
+
+				</VBox>
+
+
+				<!-- Low Stock -->
+
+				<VBox HBox.hgrow="ALWAYS" styleClass="card summary-card">
+
+					<Label text="Low Stock" styleClass="card-label" />
+
+					<Region VBox.vgrow="ALWAYS" />
+
+					<Label text="18" styleClass="summary-value" />
+
+					<Label text="items need attention"
+						styleClass="secondary-label" />
+
+				</VBox>
+
+			</HBox>
+
+
+			<!-- ================================================= -->
+			<!-- LOWER SECTION -->
+			<!-- ================================================= -->
+
+			<HBox spacing="16" VBox.vgrow="ALWAYS">
+
+
+				<!-- ================================================= -->
+				<!-- RECENT TRANSACTIONS -->
+				<!-- ================================================= -->
+
+				<VBox HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" spacing="12"
+					styleClass="card">
+
+					<HBox alignment="CENTER_LEFT">
+
+						<Label text="Recent Transactions" styleClass="section-title" />
+
+						<Region HBox.hgrow="ALWAYS" />
+
+						<Label text="↑ ↓ Navigate   •   Enter Open"
+							styleClass="keyboard-hint" />
+
+					</HBox>
+
+
+					<TableView fx:id="recentTransactionsTable"
+						VBox.vgrow="ALWAYS" focusTraversable="true"
+						styleClass="transaction-table">
+
+						<columns>
+
+							<TableColumn fx:id="invoiceColumn" text="Invoice"
+								prefWidth="110" />
+
+							<TableColumn fx:id="customerColumn" text="Customer"
+								prefWidth="220" />
+
+							<TableColumn fx:id="amountColumn" text="Amount"
+								prefWidth="130" />
+
+							<TableColumn fx:id="statusColumn" text="Status"
+								prefWidth="120" />
+
+						</columns>
+
+						<placeholder>
+
+							<Label text="No recent transactions"
+								styleClass="empty-label" />
+
+						</placeholder>
+
+					</TableView>
+
+				</VBox>
+
+
+				<!-- ================================================= -->
+				<!-- QUICK ACTIONS -->
+				<!-- ================================================= -->
+
+				<VBox prefWidth="270" spacing="14" styleClass="card">
+
+					<Label text="Quick Actions" styleClass="section-title" />
+
+
+					<!-- New Sale -->
+
+					<Button text="New Sale" mnemonicParsing="false"
+						maxWidth="Infinity" focusTraversable="true"
+						styleClass="action-button">
+
+						<graphic>
+
+							<Label text="1" styleClass="key-badge" />
+
+						</graphic>
+
+					</Button>
+
+
+					<!-- Add Product -->
+
+					<Button text="Add Product" mnemonicParsing="false"
+						maxWidth="Infinity" focusTraversable="true"
+						styleClass="action-button">
+
+						<graphic>
+
+							<Label text="2" styleClass="key-badge" />
+
+						</graphic>
+
+					</Button>
+
+
+					<!-- Add Customer -->
+
+					<Button text="Add Customer" mnemonicParsing="false"
+						maxWidth="Infinity" focusTraversable="true"
+						styleClass="action-button">
+
+						<graphic>
+
+							<Label text="3" styleClass="key-badge" />
+
+						</graphic>
+
+					</Button>
+
+
+					<Region VBox.vgrow="ALWAYS" />
+
+
+					<Separator />
+
+
+					<!-- Keyboard help -->
+
+					<VBox spacing="7">
+
+						<Label text="Keyboard" styleClass="keyboard-title" />
+
+						<HBox>
+							<Label text="F2" styleClass="key-small" />
+
+							<Label text="  New Sale" styleClass="keyboard-text" />
+						</HBox>
+
+						<HBox>
+							<Label text="F3" styleClass="key-small" />
+
+							<Label text="  Products" styleClass="keyboard-text" />
+						</HBox>
+
+						<HBox>
+							<Label text="F4" styleClass="key-small" />
+
+							<Label text="  Customers" styleClass="keyboard-text" />
+						</HBox>
+
+						<HBox>
+							<Label text="Esc" styleClass="key-small" />
+
+							<Label text="  Back" styleClass="keyboard-text" />
+						</HBox>
+
+					</VBox>
+
+				</VBox>
+
+			</HBox>
+
+		</VBox>
+
+	</center>
+
+
+	<!-- ===================================================== -->
+	<!-- FOOTER -->
+	<!-- ===================================================== -->
+
+	<bottom>
+
+		<HBox alignment="CENTER_LEFT" spacing="18" styleClass="footer">
+
+			<padding>
+				<Insets top="10" right="28" bottom="12" left="28" />
+			</padding>
+
+			<Label text="F2  New Sale" styleClass="footer-shortcut" />
+
+			<Label text="F3  Products" styleClass="footer-shortcut" />
+
+			<Label text="F4  Customers" styleClass="footer-shortcut" />
+
+			<Region HBox.hgrow="ALWAYS" />
+
+			<Label text="Enter Select" styleClass="footer-shortcut" />
+
+			<Label text="Esc Back" styleClass="footer-shortcut" />
+
+		</HBox>
+
+	</bottom>
+
+</BorderPane>

@@ -1,0 +1,287 @@
+/* ============================================================
+   ROOT
+   ============================================================ */
+
+.root {
+    -fx-background-color: #F5F6F8;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.header {
+    -fx-background-color: transparent;
+}
+
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #17191C;
+}
+
+.date-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #8A8F98;
+}
+
+.shortcut-hint {
+    -fx-background-color: #E8EAED;
+    -fx-background-radius: 7px;
+
+    -fx-padding: 5px 8px;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+
+    -fx-text-fill: #555A63;
+}
+
+.command-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #8A8F98;
+}
+
+
+/* ============================================================
+   BENTO CARDS
+   ============================================================ */
+
+.card {
+    -fx-background-color: #FFFFFF;
+
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+
+    -fx-padding: 20px;
+
+    -fx-effect:
+        dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.055),
+            18,
+            0.12,
+            0,
+            4
+        );
+}
+
+
+/* ============================================================
+   SUMMARY CARDS
+   ============================================================ */
+
+.summary-card {
+    -fx-min-height: 135px;
+}
+
+.card-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+
+    -fx-text-fill: #737983;
+}
+
+.summary-value {
+    -fx-font-size: 30px;
+    -fx-font-weight: 700;
+
+    -fx-text-fill: #17191C;
+}
+
+.secondary-label {
+    -fx-font-size: 12px;
+
+    -fx-text-fill: #9A9EA6;
+}
+
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+
+    -fx-text-fill: #202328;
+}
+
+.keyboard-hint {
+    -fx-font-size: 11px;
+    -fx-text-fill: #9A9EA6;
+}
+
+
+/* ============================================================
+   TRANSACTION TABLE
+   ============================================================ */
+
+.transaction-table {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.transaction-table .column-header-background {
+    -fx-background-color: #F7F8FA;
+
+    -fx-background-radius: 10px;
+}
+
+.transaction-table .column-header {
+    -fx-background-color: transparent;
+
+    -fx-padding: 10px;
+}
+
+.transaction-table .column-header .label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+
+    -fx-text-fill: #858A93;
+}
+
+.transaction-table .table-row-cell {
+    -fx-background-color: transparent;
+
+    -fx-cell-size: 44px;
+}
+
+.transaction-table .table-row-cell:selected {
+    -fx-background-color: #EEF3FF;
+
+    -fx-background-radius: 10px;
+}
+
+.transaction-table .table-row-cell:focused:selected {
+    -fx-background-color: #E3ECFF;
+}
+
+.transaction-table .table-cell {
+    -fx-border-color: transparent;
+
+    -fx-padding: 0 10px;
+
+    -fx-font-size: 13px;
+
+    -fx-text-fill: #34383E;
+}
+
+.empty-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #A0A4AB;
+}
+
+
+/* ============================================================
+   QUICK ACTIONS
+   ============================================================ */
+
+.action-button {
+    -fx-background-color: #F5F6F8;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: transparent;
+
+    -fx-padding: 13px 14px;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+
+    -fx-text-fill: #292D33;
+}
+
+.action-button:hover {
+    -fx-background-color: #ECEEF2;
+}
+
+.action-button:focused {
+    -fx-background-color: #E8EEFF;
+
+    -fx-border-color: #5B7CFA;
+    -fx-border-width: 2px;
+    -fx-border-radius: 14px;
+}
+
+.action-button:pressed {
+    -fx-background-color: #DDE5FF;
+}
+
+
+/* ============================================================
+   KEY BADGES
+   ============================================================ */
+
+.key-badge {
+    -fx-background-color: #FFFFFF;
+
+    -fx-background-radius: 7px;
+
+    -fx-border-color: #D9DCE1;
+    -fx-border-radius: 7px;
+
+    -fx-padding: 4px 8px;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+
+    -fx-text-fill: #555A63;
+}
+
+
+/* ============================================================
+   KEYBOARD HELP
+   ============================================================ */
+
+.keyboard-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+
+    -fx-text-fill: #858A93;
+}
+
+.keyboard-text {
+    -fx-font-size: 11px;
+    -fx-text-fill: #858A93;
+}
+
+.key-small {
+    -fx-min-width: 30px;
+
+    -fx-alignment: CENTER;
+
+    -fx-background-color: #F0F1F3;
+
+    -fx-background-radius: 5px;
+
+    -fx-padding: 3px 5px;
+
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+
+    -fx-text-fill: #626771;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+    -fx-background-color: #FFFFFF;
+
+    -fx-border-color: #E7E9EC transparent transparent transparent;
+}
+
+.footer-shortcut {
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #777C85;
+}
