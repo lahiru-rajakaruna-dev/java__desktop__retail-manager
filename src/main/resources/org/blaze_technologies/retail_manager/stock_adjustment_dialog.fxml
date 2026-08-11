@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1" styleClass="stock-dialog">
+
+	<content>
+
+		<VBox spacing="18">
+
+			<padding>
+				<Insets top="24" right="26" bottom="10" left="26" />
+			</padding>
+
+
+			<!-- ================================================= -->
+			<!-- HEADER -->
+			<!-- ================================================= -->
+
+			<VBox spacing="3">
+
+				<Label text="Stock Adjustment" styleClass="dialog-title" />
+
+				<Label text="Increase or decrease available stock"
+					styleClass="dialog-description" />
+
+			</VBox>
+
+
+			<!-- ================================================= -->
+			<!-- PRODUCT INFORMATION -->
+			<!-- ================================================= -->
+
+			<VBox spacing="10" styleClass="product-summary">
+
+				<HBox>
+
+					<Label text="Product" styleClass="summary-label" />
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Label fx:id="productNameLabel" text="Coca Cola 500ml"
+						styleClass="summary-value" />
+
+				</HBox>
+
+
+				<HBox>
+
+					<Label text="Current Stock" styleClass="summary-label" />
+
+					<Region HBox.hgrow="ALWAYS" />
+
+					<Label fx:id="currentStockLabel" text="24"
+						styleClass="stock-value" />
+
+				</HBox>
+
+			</VBox>
+
+
+			<!-- ================================================= -->
+			<!-- FORM -->
+			<!-- ================================================= -->
+
+			<GridPane hgap="14" vgap="12">
+
+				<columnConstraints>
+
+					<ColumnConstraints minWidth="125" prefWidth="125" />
+
+					<ColumnConstraints hgrow="ALWAYS" />
+
+				</columnConstraints>
+
+
+				<!-- Adjustment -->
+
+				<Label text="Adjustment" GridPane.rowIndex="0"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<TextField fx:id="adjustmentField" promptText="+10 or -5"
+					focusTraversable="true" GridPane.rowIndex="0"
+					GridPane.columnIndex="1" styleClass="form-field" />
+
+
+				<!-- Reason -->
+
+				<Label text="Reason" GridPane.rowIndex="1"
+					GridPane.columnIndex="0" styleClass="field-label" />
+
+				<ComboBox fx:id="reasonComboBox" promptText="Select reason"
+					maxWidth="Infinity" focusTraversable="true" GridPane.rowIndex="1"
+					GridPane.columnIndex="1" styleClass="form-field" />
+
+			</GridPane>
+
+
+			<!-- ================================================= -->
+			<!-- RESULT -->
+			<!-- ================================================= -->
+
+			<VBox spacing="5" styleClass="new-stock-panel">
+
+				<Label text="New Stock" styleClass="new-stock-label" />
+
+				<Label fx:id="newStockLabel" text="34"
+					styleClass="new-stock-value" />
+
+			</VBox>
+
+
+			<!-- ================================================= -->
+			<!-- KEYBOARD HELP -->
+			<!-- ================================================= -->
+
+			<HBox alignment="CENTER_LEFT" spacing="14"
+				styleClass="dialog-hints">
+
+				<Label text="Enter" styleClass="key-small" />
+
+				<Label text="Apply" styleClass="hint-text" />
+
+				<Region HBox.hgrow="ALWAYS" />
+
+				<Label text="Esc" styleClass="key-small" />
+
+				<Label text="Cancel" styleClass="hint-text" />
+
+			</HBox>
+
+		</VBox>
+
+	</content>
+
+
+	<buttonTypes>
+		<ButtonType fx:constant="CANCEL" />
+		<ButtonType fx:constant="OK" />
+	</buttonTypes>
+
+</DialogPane>
