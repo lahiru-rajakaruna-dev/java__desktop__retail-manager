@@ -11,24 +11,79 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 
 public class ApplicationController {
-	private String rootPackage = App.class.getPackageName().replace('.', '/');
+	private String rootPackage = App.class.getPackageName()
+			.replace(
+					'.',
+					'/'
+			);
 	@FXML
 	private Node appRoot;
 	@FXML
 	private TabbarController tabbarController;
-
 	private Parent currentView;
 	private String currentViewCss;
 
 	public void initialize() {
 		tabbarController.setAppController(this);
+		this.attachKeyeventHandlers();
+	}
+
+	private void attachKeyeventHandlers() throws Error {
+		Scene currentScene = App.getCurrentScene();
+		if (currentScene == null) {
+			throw new Error(
+					"Cannot get Current Scene to attach key handlers"
+			);
+		}
+
+		currentScene.addEventHandler(
+				KeyEvent.KEY_PRESSED,
+				(e) -> {
+					switch (e.getCode()) {
+						case F1 -> {
+							this.switchView(
+									EView.DASHBOARD
+							);
+							e.consume();
+						}
+						case F2 -> {
+							this.switchView(EView.SALES);
+							e.consume();
+						}
+						case F3 -> {
+							this.switchView(EView.PRODUCTS);
+							e.consume();
+						}
+						case F4 -> {
+							this.switchView(
+									EView.CUSTOMERS
+							);
+							e.consume();
+						}
+						case F5 -> {
+							this.switchView(EView.REPORTS);
+							e.consume();
+						}
+						case F6 -> {
+							this.switchView(EView.SETTINGS);
+							e.consume();
+						}
+					}
+				}
+		);
+
 	}
 
 	public void switchView(EView view) {
-		System.out.printf("Switching View to %s\n", view.getFileName());
+		System.out.printf(
+				"Switching View to %s\n",
+				view.getFileName()
+		);
 		loadView(view);
 		swap();
 	}
@@ -46,11 +101,13 @@ public class ApplicationController {
 		try {
 			currentView = loadFXML(view.getFileName());
 		} catch (FileNotFoundException e) {
-			System.err.println("LOAD FXML: " + e.getCause());
+			System.err
+					.println("LOAD FXML: " + e.getCause());
 			e.printStackTrace();
 			System.exit(1);
 		} catch (IOException e) {
-			System.err.println("READ FXML: " + e.getCause());
+			System.err
+					.println("READ FXML: " + e.getCause());
 			e.printStackTrace();
 			System.exit(1);
 		}
@@ -58,13 +115,16 @@ public class ApplicationController {
 		try {
 			currentViewCss = loadCSS(view.getFileName());
 		} catch (FileNotFoundException e) {
-			System.err.println("LOAD FXML: " + e.getCause());
+			System.err
+					.println("LOAD FXML: " + e.getCause());
 			e.printStackTrace();
 			System.exit(1);
 		}
 
 		if (currentView == null || currentViewCss == null) {
-			throw new InternalError("No CSS file or No Parent Element");
+			throw new InternalError(
+					"No CSS file or No Parent Element"
+			);
 		}
 
 		currentView.getStylesheets().add(currentViewCss);
@@ -72,32 +132,64 @@ public class ApplicationController {
 
 	private Parent loadFXML(String fileName)
 			throws FileNotFoundException, IOException {
-		URL fxmlFileUrl = ApplicationController.class.getResource(
-				String.format("/%s/%s.fxml", rootPackage, fileName));
+		URL fxmlFileUrl = ApplicationController.class
+				.getResource(
+						String.format(
+								"/%s/%s.fxml",
+								rootPackage,
+								fileName
+						)
+				);
 
 		if (fxmlFileUrl == null) {
-			String searchedFileUrl = String.format("/%s/%s.fxml", rootPackage,
-					fileName);
+			String searchedFileUrl = String.format(
+					"/%s/%s.fxml",
+					rootPackage,
+					fileName
+			);
 			System.out.println(searchedFileUrl);
 			throw new FileNotFoundException(
-					String.format("Could not find the %s.fxml", fileName));
+					String.format(
+							"Could not find the %s.fxml",
+							fileName
+					)
+			);
 		}
 
 		FXMLLoader loader = new FXMLLoader(fxmlFileUrl);
 		return loader.load();
 	}
 
-	private String loadCSS(String fileName) throws FileNotFoundException {
-		URL cssFileUrl = ApplicationController.class.getResource(
-				String.format("/%s/%s.css", rootPackage, fileName));
+	private String loadCSS(String fileName)
+			throws FileNotFoundException {
+		URL cssFileUrl = ApplicationController.class
+				.getResource(
+						String.format(
+								"/%s/%s.css",
+								rootPackage,
+								fileName
+						)
+				);
 		if (cssFileUrl == null) {
 			System.out.println(
-					String.format("/%s/%s.css", rootPackage, fileName));
+					String.format(
+							"/%s/%s.css",
+							rootPackage,
+							fileName
+					)
+			);
 			throw new FileNotFoundException(
-					String.format("Could not find the %s.css", fileName));
+					String.format(
+							"Could not find the %s.css",
+							fileName
+					)
+			);
 		}
 
-		return cssFileUrl.getFile();
+		System.out.println(cssFileUrl.getFile());
+		System.out.println(cssFileUrl.toExternalForm());
+
+		return cssFileUrl.toExternalForm();
 	}
 
 }
