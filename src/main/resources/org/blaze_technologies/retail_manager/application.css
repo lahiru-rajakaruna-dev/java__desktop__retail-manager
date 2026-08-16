@@ -8,7 +8,7 @@
    ========================================================================== */
 
 .root {
-    -fx-font-family: "Inter", "Segoe UI", "Arial";
+    -fx-font-family: "Inter","Ubuntu", "Segoe UI", "Arial";
     -fx-font-size: 14px;
 
     -fx-background-color: #F4F6F9;
