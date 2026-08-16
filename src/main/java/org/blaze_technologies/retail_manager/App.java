@@ -42,9 +42,12 @@ public class App extends Application {
 		}
 
 		try {
-			appScene = new Scene(scene, 1280, 800);
+			appScene = new Scene(scene, 1366, 768);
 			appScene.getStylesheets().clear();
 			appScene.getStylesheets().add(css);
+			appStage.setTitle(
+					"Retailer by Blaze Technolgies"
+			);
 			appStage.setScene(appScene);
 			appStage.setFullScreen(true);
 			appStage.show();
@@ -54,6 +57,10 @@ public class App extends Application {
 			e.printStackTrace();
 			System.exit(1);
 		}
+	}
+
+	public static Scene getCurrentScene() {
+		return appScene;
 	}
 
 	private static EScene getInitialScene() {
@@ -75,11 +82,16 @@ public class App extends Application {
 			newScene = loadFXML(sceneName.getFileName());
 		} catch (FileNotFoundException e) {
 			System.err.println(
-					"[FXML LOADING ERROR]:NOT FOUND > " + e.getMessage());
+					"[FXML LOADING ERROR]:NOT FOUND > "
+							+ e.getMessage()
+			);
 			e.printStackTrace();
 			System.exit(1);
 		} catch (IOException e) {
-			System.err.println("[FXML LOADING ERROR]:READ > " + e.getMessage());
+			System.err.println(
+					"[FXML LOADING ERROR]:READ > "
+							+ e.getMessage()
+			);
 			e.printStackTrace();
 			System.exit(1);
 		}
@@ -87,7 +99,9 @@ public class App extends Application {
 		try {
 			newCss = loadCSS(sceneName.getFileName());
 		} catch (FileNotFoundException e) {
-			System.err.println("[CSS LOADING ERROR]: " + e.getCause());
+			System.err.println(
+					"[CSS LOADING ERROR]: " + e.getCause()
+			);
 			e.printStackTrace();
 			System.exit(1);
 		}
@@ -99,27 +113,40 @@ public class App extends Application {
 			appScene.getStylesheets().clear();
 			appScene.getStylesheets().add(newCssLocked);
 			appScene.setRoot(newSceneLocked);
-			System.out.println(appStage.getScene().getRoot());
+			System.out
+					.println(appStage.getScene().getRoot());
 
 		});
 	}
 
 	private static String loadCSS(String fileName)
 			throws FileNotFoundException {
-		URL cssURL = App.class.getResource(String.format(
-				"/org/blaze_technologies/retail_manager/%s.css", fileName));
+		URL cssURL = App.class.getResource(
+				String.format(
+						"/org/blaze_technologies/retail_manager/%s.css",
+						fileName
+				)
+		);
 		if (cssURL == null) {
-			throw new FileNotFoundException("Could not find css file");
+			throw new FileNotFoundException(
+					"Could not find css file"
+			);
 		}
 		return cssURL.toExternalForm();
 	}
 
 	private static Parent loadFXML(String fileName)
 			throws FileNotFoundException, IOException {
-		URL fxmlUrl = App.class.getResource(String.format(
-				"/org/blaze_technologies/retail_manager/%s.fxml", fileName));
+		URL fxmlUrl = App.class.getResource(
+				String.format(
+						"/org/blaze_technologies/retail_manager/%s.fxml",
+						fileName
+				)
+		);
 		if (fxmlUrl == null) {
-			throw new FileNotFoundException("Could not find the fxml file");
+			throw new FileNotFoundException(
+					"Could not find the fxml file"
+			);
 		}
 
 		FXMLLoader loader = new FXMLLoader(fxmlUrl);
