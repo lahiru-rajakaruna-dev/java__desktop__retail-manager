@@ -1,478 +1,351 @@
-/* ============================================================
-ROOT
-============================================================ */
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
 
-.products-root {
-	-fx-background-color: #F5F6F8;
-	-fx-font-family: "Inter", "Segoe UI", sans-serif;
+.products {
+    -fx-background-color: #f3f4f6;
+    -fx-font-family: "Inter", "Ubuntu", "Segoe UI", sans-serif;
 }
 
-/* ============================================================
-HEADER
-============================================================ */
 
-.page-header {
-	-fx-background-color: transparent;
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.products-header {
+    -fx-padding: 0.0 0.0 18.0px 0.0;
 }
 
-.screen-title {
-	-fx-font-size: 25.0px;
-	-fx-font-weight: 700.0;
-	-fx-text-fill: #17191C;
+.page-title {
+    -fx-font-size: 30.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #111318;
 }
 
-.description {
-	-fx-font-size: 12.0px;
-	-fx-text-fill: #8A8F98;
+.page-subtitle {
+    -fx-font-size: 14.0px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #747982;
 }
 
-.header-hint {
-	-fx-font-size: 11.0px;
-	-fx-text-fill: #858A93;
+.header-label {
+    -fx-font-size: 10.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #858a91;
 }
 
-/* ============================================================
-KEY BADGES
-============================================================ */
-
-.key-badge {
-	-fx-background-color: #E9EBEE;
-
-	-fx-background-radius: 6.0px;
-
-	-fx-padding: 4.0px 7.0px;
-
-	-fx-font-size: 10.0px;
-	-fx-font-weight: 700.0;
-
-	-fx-text-fill: #5F646D;
-
+.header-value {
+    -fx-font-size: 15.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #282b30;
 }
 
-/* ============================================================
-SEARCH
-============================================================ */
 
-.search-field {
-	-fx-background-color: #FFFFFF;
+/* =========================================================
+   TABS
+   ========================================================= */
 
-	-fx-background-radius: 12.0px;
-
-	-fx-border-color: #E0E3E7;
-	-fx-border-radius: 12.0px;
-
-	-fx-padding: 11.0px 14.0px;
-
-	-fx-font-size: 13.0px;
-
+.products-tabs {
+    -fx-background-color: transparent;
+    -fx-tab-min-height: 38.0px;
 }
 
-.search-field:focused {
-	-fx-border-color: #5B7CFA;
-	-fx-border-width: 2.0px;
+.products-tabs .tab-header-area {
+    -fx-padding: 0.0;
 }
+
+.products-tabs .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.products-tabs .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7.0px 7.0px 0.0 0.0;
+    -fx-padding: 8.0px 18.0px;
+}
+
+.products-tabs .tab-label {
+    -fx-font-size: 13.0px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #858a91;
+}
+
+.products-tabs .tab:selected {
+    -fx-background-color: #ffffff;
+}
+
+.products-tabs .tab:selected .tab-label {
+    -fx-text-fill: #17191d;
+}
+
+.products-tabs .tab-content-area {
+    -fx-background-color: transparent;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.products-content,
+.categories-content {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0.0 10.0px 10.0px 10.0px;
+
+    -fx-border-color: #dfe2e6;
+    -fx-border-radius: 0.0 10.0px 10.0px 10.0px;
+    -fx-border-width: 1.0px;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.product-search,
+.category-search {
+    -fx-background-color: #f4f5f7;
+    -fx-background-radius: 8.0px;
+
+    -fx-border-color: #d9dde2;
+    -fx-border-radius: 8.0px;
+    -fx-border-width: 1.0px;
+
+    -fx-padding: 12.0px 14.0px;
+
+    -fx-font-size: 14.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #17191d;
+}
+
+.product-search:focused,
+.category-search:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #202328;
+    -fx-border-width: 2.0px;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+   ========================================================= */
 
 .search-button {
-	-fx-background-color: #20242A;
+    -fx-background-color: #17191d;
+    -fx-background-radius: 8.0px;
 
-	-fx-background-radius: 12.0px;
+    -fx-padding: 10.0 18.0px;
 
-	-fx-padding: 11.0px 20.0px;
-
-	-fx-font-size: 12.0px;
-	-fx-font-weight: 700.0;
-
-	-fx-text-fill: white;
-
+    -fx-font-size: 12.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ffffff;
 }
 
 .search-button:hover {
-	-fx-background-color: #111418;
+    -fx-background-color: #292c31;
 }
 
 .search-button:focused {
-	-fx-border-color: #5B7CFA;
-	-fx-border-width: 2.0px;
-	-fx-border-radius: 12.0px;
+    -fx-border-color: #17191d;
+    -fx-border-width: 2.0px;
 }
 
-/* ============================================================
-TABLE AREA
-============================================================ */
 
-.table-container {
-	-fx-background-color: transparent;
+/* =========================================================
+   FILTER BUTTONS
+   ========================================================= */
+
+.filter-button {
+    -fx-background-color: #f1f3f5;
+    -fx-background-radius: 7.0px;
+
+    -fx-border-color: #dfe2e6;
+    -fx-border-radius: 7.0px;
+
+    -fx-padding: 10.0px 13.0px;
+
+    -fx-font-size: 11.0px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #555b63;
 }
 
-.table-toolbar {
-	-fx-padding: 0.0 0.0 10.0px 0.0;
+.filter-button:hover {
+    -fx-background-color: #e8eaed;
 }
 
-.section-title {
-	-fx-font-size: 15.0px;
-	-fx-font-weight: 700.0;
-
-	-fx-text-fill: #202328;
-
+.filter-button:focused {
+    -fx-border-color: #202328;
+    -fx-border-width: 2.0px;
 }
 
-.keyboard-hint {
-	-fx-font-size: 11.0px;
-	-fx-text-fill: #9A9EA6;
+.filter-active {
+    -fx-background-color: #202328;
+    -fx-border-color: #202328;
+    -fx-text-fill: #ffffff;
 }
 
-/* ============================================================
-PRODUCT TABLE
-============================================================ */
 
-.products-table {
-	-fx-background-color: #FFFFFF;
+/* =========================================================
+   NEW PRODUCT
+   ========================================================= */
 
-	-fx-background-radius: 18.0px;
+.new-product-button {
+    -fx-background-color: #17191d;
+    -fx-background-radius: 8.0px;
 
-	-fx-border-color: transparent;
+    -fx-padding: 11.0px 16.0px;
 
-	-fx-table-cell-border-color: transparent;
-
-	-fx-padding: 5.0px;
-
+    -fx-font-size: 12.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ffffff;
 }
 
-.products-table .column-header-background {
-	-fx-background-color: #F7F8FA;
-
-	-fx-background-radius: 12.0px;
-
+.new-product-button:hover {
+    -fx-background-color: #292c31;
 }
 
-.products-table .column-header {
-	-fx-background-color: transparent;
-
-	-fx-padding: 11.0px;
-
+.new-product-button:focused {
+    -fx-border-color: #17191d;
+    -fx-border-width: 2.0px;
 }
 
-.products-table .column-header .label {
-	-fx-font-size: 11.0px;
-	-fx-font-weight: 700.0;
 
-	-fx-text-fill: #858A93;
+/* =========================================================
+   TABLE
+   ========================================================= */
 
+.products-table,
+.categories-table {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.0;
+
+    -fx-padding: 14.0px 0.0 8.0px 0.0;
 }
 
-.products-table .table-row-cell {
-	-fx-background-color: transparent;
-
-	-fx-cell-size: 46.0px;
-
+.products-table .column-header-background,
+.categories-table .column-header-background {
+    -fx-background-color: #f4f5f6;
 }
 
-.products-table .table-row-cell:selected {
-	-fx-background-color: #EAF0FF;
+.products-table .column-header,
+.categories-table .column-header {
+    -fx-background-color: transparent;
 
-	-fx-background-radius: 9.0px;
+    -fx-padding: 11.0px 9.0px;
 
+    -fx-border-color: transparent transparent #e1e4e7 transparent;
 }
 
-.products-table .table-row-cell:focused:selected {
-	-fx-background-color: #DDE7FF;
-
-	-fx-border-color: #5B7CFA;
-	-fx-border-width: 0.0 0.0 0.0 2.0px;
-
+.products-table .column-header .label,
+.categories-table .column-header .label {
+    -fx-font-size: 10.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #858a91;
 }
 
-.products-table .table-cell {
-	-fx-border-color: transparent;
 
-	-fx-padding: 0.0 10.0px;
+/* =========================================================
+   TABLE ROWS
+   ========================================================= */
 
-	-fx-font-size: 13.0px;
+.products-table .table-row-cell,
+.categories-table .table-row-cell {
+    -fx-background-color: transparent;
 
-	-fx-text-fill: #34383E;
+    -fx-border-color: transparent transparent #eef0f2 transparent;
 
+    -fx-cell-size: 48.0px;
 }
 
-/* ============================================================
-EMPTY STATE
-============================================================ */
-
-.empty-title {
-	-fx-font-size: 14.0px;
-	-fx-font-weight: 700.0;
-
-	-fx-text-fill: #747983;
-
+.products-table .table-row-cell:hover,
+.categories-table .table-row-cell:hover {
+    -fx-background-color: #f6f7f8;
 }
 
-.empty-description {
-	-fx-font-size: 12.0px;
-
-	-fx-text-fill: #A0A4AB;
-
+.products-table .table-row-cell:selected,
+.categories-table .table-row-cell:selected {
+    -fx-background-color: #e9ecef;
 }
 
-/* ============================================================
-FOOTER
-============================================================ */
-
-.footer {
-	-fx-background-color: #FFFFFF;
-
-	-fx-border-color: #E7E9EC transparent transparent transparent;
-
+.products-table .table-row-cell:focused,
+.categories-table .table-row-cell:focused {
+    -fx-background-color: #e9ecef;
 }
 
-.footer-shortcut {
-	-fx-font-size: 11.0px;
 
-	-fx-text-fill: #777C85;
+/* =========================================================
+   TABLE CELLS
+   ========================================================= */
 
+.products-table .table-cell,
+.categories-table .table-cell {
+    -fx-padding: 10.0px 9.0px;
+
+    -fx-font-size: 13.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #292c31;
 }
 
-/* ============================================================
-GENERAL FOCUS
-============================================================ */
+.products-table .table-row-cell:selected .table-cell,
+.categories-table .table-row-cell:selected .table-cell {
+    -fx-font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER / KEYBOARD HINTS
+   ========================================================= */
+
+.products-footer {
+    -fx-padding: 10.0px 4.0px 0.0 4.0px;
+}
+
+.keyboard-key {
+    -fx-min-width: 27.0px;
+    -fx-min-height: 23.0px;
+
+    -fx-alignment: CENTER;
+
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 5.0px;
+
+    -fx-font-size: 9.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #5f656d;
+}
+
+.keyboard-label {
+    -fx-font-size: 11.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #858a91;
+}
+
+.selection-status {
+    -fx-font-size: 11.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #858a91;
+}
+
+
+/* =========================================================
+   SEPARATOR
+   ========================================================= */
+
+.separator .line {
+    -fx-border-color: #e2e5e8;
+    -fx-border-width: 1.0px 0.0 0.0 0.0;
+}
+
+
+/* =========================================================
+   GENERAL FOCUS
+   ========================================================= */
 
 .button:focused {
-	-fx-border-color: #5B7CFA;
-	-fx-border-width: 2.0px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }
 
-.text-field:focused {
-	-fx-border-color: #5B7CFA;
-	-fx-border-width: 2.0px;
-}
-
-
-/* ============================================================
-PRODUCT / STOCK DIALOGS
-============================================================ */
-
-.product-dialog,
-.stock-dialog {
--fx-background-color: #FFFFFF;
-}
-
-/* ============================================================
-DIALOG TYPOGRAPHY
-============================================================ */
-
-.dialog-title {
--fx-font-size: 21.0px;
--fx-font-weight: 700.0;
-
-
--fx-text-fill: #17191C;
-
-
-}
-
-.dialog-description {
--fx-font-size: 12.0px;
-
-
--fx-text-fill: #8A8F98;
-
-
-}
-
-.field-label {
--fx-font-size: 12.0px;
--fx-font-weight: 600.0;
-
-
--fx-text-fill: #555A63;
-
-
-}
-
-/* ============================================================
-FORM FIELDS
-============================================================ */
-
-.form-field {
--fx-background-color: #F5F6F8;
-
-
--fx-background-radius: 10.0px;
-
--fx-border-color: transparent;
--fx-border-radius: 10.0px;
-
--fx-padding: 10.0px 12.0px;
-
--fx-font-size: 13.0px;
-
-
-}
-
-.form-field:focused {
--fx-background-color: #FFFFFF;
-
-
--fx-border-color: #5B7CFA;
--fx-border-width: 2.0px;
-
--fx-border-radius: 10.0px;
-
-
-}
-
-/* ============================================================
-PRODUCT SUMMARY
-============================================================ */
-
-.product-summary {
--fx-background-color: #F7F8FA;
-
-
--fx-background-radius: 12.0px;
-
--fx-padding: 14.0px;
-
-
-}
-
-.summary-label {
--fx-font-size: 12.0px;
-
-
--fx-text-fill: #858A93;
-
-
-}
-
-.summary-value {
--fx-font-size: 13.0px;
--fx-font-weight: 600.0;
-
-
--fx-text-fill: #34383E;
-
-
-}
-
-.stock-value {
--fx-font-size: 16.0px;
--fx-font-weight: 700.0;
-
-
--fx-text-fill: #17191C;
-
-
-}
-
-/* ============================================================
-NEW STOCK
-============================================================ */
-
-.new-stock-panel {
--fx-background-color: #F0F4FF;
-
-
--fx-background-radius: 12.0px;
-
--fx-padding: 14.0px;
-
-
-}
-
-.new-stock-label {
--fx-font-size: 11.0px;
--fx-font-weight: 600.0;
-
-
--fx-text-fill: #68728A;
-
-
-}
-
-.new-stock-value {
--fx-font-size: 28.0px;
--fx-font-weight: 700.0;
-
-
--fx-text-fill: #17191C;
-
-
-}
-
-/* ============================================================
-DIALOG BUTTONS
-============================================================ */
-
-.product-dialog .button,
-.stock-dialog .button {
--fx-background-radius: 10.0px;
-
-
--fx-padding: 9.0px 18.0px;
-
--fx-font-size: 12.0px;
--fx-font-weight: 600.0;
-
-
-}
-
-.product-dialog .button:default,
-.stock-dialog .button:default {
--fx-background-color: #2563EB;
-
-
--fx-text-fill: white;
-
-
-}
-
-.product-dialog .button:default:hover,
-.stock-dialog .button:default:hover {
--fx-background-color: #1D4ED8;
-}
-
-.product-dialog .button:cancel,
-.stock-dialog .button:cancel {
--fx-background-color: #F0F1F3;
-
-
--fx-text-fill: #4B5058;
-
-
-}
-
-.product-dialog .button:focused,
-.stock-dialog .button:focused {
--fx-border-color: #5B7CFA;
--fx-border-width: 2.0px;
--fx-border-radius: 10.0px;
-}
-
-/* ============================================================
-KEYBOARD HINTS
-============================================================ */
-
-.dialog-hints {
--fx-padding: 4.0px 0.0 0.0 0.0;
-}
-
-.key-small {
--fx-background-color: #ECEEF1;
-
-
--fx-background-radius: 5.0px;
-
--fx-padding: 3.0px 6.0px;
-
--fx-font-size: 10.0px;
--fx-font-weight: 700.0;
-
--fx-text-fill: #626771;
-
-
-}
-
-.hint-text {
--fx-font-size: 10.0px;
-
--fx-text-fill: #92969E;
+.table-view:focused {
+    -fx-background-insets: 0.0;
 }
