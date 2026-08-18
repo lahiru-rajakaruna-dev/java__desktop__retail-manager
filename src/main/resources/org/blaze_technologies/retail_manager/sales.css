@@ -1,399 +1,548 @@
-/* ============================================================
-ROOT
-============================================================ */
+/* =========================================================
+   SALES
+   ========================================================= */
 
-.sales-root {
-	-fx-background-color: #F5F6F8;
-	-fx-font-family: "Inter", "Segoe UI", sans-serif;
+.sales {
+    -fx-background-color: #f3f4f6;
+    -fx-font-family: "Inter", "Ubuntu", "Segoe UI", sans-serif;
 }
 
-/* ============================================================
-HEADER
-============================================================ */
 
-.pos-header,
-.history-header {
-	-fx-background-color: transparent;
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.sales-header {
+    -fx-padding: 0.0 0.0 18.0px 0.0;
 }
 
-.screen-title {
-	-fx-font-size: 25px;
-	-fx-font-weight: 700;
-	-fx-text-fill: #17191C;
+.page-title {
+    -fx-font-size: 30.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #111318;
 }
 
-.invoice-label,
-.history-description {
-	-fx-font-size: 12px;
-	-fx-text-fill: #8A8F98;
+.page-subtitle {
+    -fx-font-size: 14.0px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #747982;
 }
 
-.header-hint {
-	-fx-font-size: 11px;
-	-fx-text-fill: #858A93;
+.mode-indicator {
+    -fx-padding: 7.0px 9.0px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 7.0px;
+    -fx-border-color: #dfe2e6;
+    -fx-border-radius: 7.0px;
 }
 
-/* ============================================================
-CARDS
-============================================================ */
-
-.card {
-	-fx-background-color: #FFFFFF;
-
-	-fx-background-radius: 20px;
-	-fx-border-radius: 20px;
-
-	-fx-padding: 20px;
-
-	-fx-effect:
-		dropshadow(gaussian,
-			rgba(0, 0, 0, 0.055),
-			18,
-			0.12,
-			0,
-			4);
-
+.mode-active {
+    -fx-font-size: 10.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #353940;
 }
 
-/* ============================================================
-SECTIONS
-============================================================ */
-
-.section-title {
-	-fx-font-size: 16px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: #202328;
-
+.mode-key {
+    -fx-padding: 3.0px 6.0px;
+    -fx-background-color: #eef0f2;
+    -fx-background-radius: 4.0px;
+    -fx-font-size: 9.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #656b73;
 }
 
-.keyboard-hint {
-	-fx-font-size: 11px;
-	-fx-text-fill: #9A9EA6;
+
+/* =========================================================
+   TABS
+   ========================================================= */
+
+.sales-tabs {
+    -fx-background-color: transparent;
+    -fx-tab-min-height: 38.0px;
 }
 
-/* ============================================================
-KEY BADGES
-============================================================ */
-
-.key-badge {
-	-fx-background-color: #E9EBEE;
-
-	-fx-background-radius: 6px;
-
-	-fx-padding: 4px 7px;
-
-	-fx-font-size: 10px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: #5F646D;
-
+.sales-tabs .tab-header-area {
+    -fx-padding: 0.0;
 }
 
-.key-badge-light {
-	-fx-background-color: rgba(255, 255, 255, 0.18);
-
-	-fx-background-radius: 6px;
-
-	-fx-padding: 4px 7px;
-
-	-fx-font-size: 10px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: white;
-
+.sales-tabs .tab-header-background {
+    -fx-background-color: transparent;
 }
 
-/* ============================================================
-CART TABLE
-============================================================ */
-
-.cart-table,
-.history-table {
-	-fx-background-color: transparent;
-
-	-fx-border-color: transparent;
-
-	-fx-table-cell-border-color: transparent;
-
+.sales-tabs .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 7.0px 7.0px 0.0 0.0;
+    -fx-padding: 8.0px 18.0px;
 }
 
-.cart-table .column-header-background,
-.history-table .column-header-background {
-	-fx-background-color: #F7F8FA;
-
-	-fx-background-radius: 10px;
-
+.sales-tabs .tab-label {
+    -fx-font-size: 13.0px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #858a91;
 }
 
-.cart-table .column-header,
-.history-table .column-header {
-	-fx-background-color: transparent;
-
-	-fx-padding: 10px;
-
+.sales-tabs .tab:selected {
+    -fx-background-color: #ffffff;
 }
 
-.cart-table .column-header .label,
-.history-table .column-header .label {
-	-fx-font-size: 11px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: #858A93;
-
+.sales-tabs .tab:selected .tab-label {
+    -fx-text-fill: #17191d;
 }
 
-.cart-table .table-row-cell,
-.history-table .table-row-cell {
-	-fx-background-color: transparent;
-
-	-fx-cell-size: 46px;
-
+.sales-tabs .tab-content-area {
+    -fx-background-color: transparent;
 }
 
-.cart-table .table-row-cell:selected,
-.history-table .table-row-cell:selected {
-	-fx-background-color: #EAF0FF;
 
-	-fx-background-radius: 9px;
+/* =========================================================
+   NEW SALE
+   ========================================================= */
 
+.new-sale {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0.0 10.0px 10.0px 10.0px;
+    -fx-border-color: #dfe2e6;
+    -fx-border-radius: 0.0 10.0px 10.0px 10.0px;
+    -fx-border-width: 1.0px;
 }
 
-.cart-table .table-row-cell:focused:selected,
-.history-table .table-row-cell:focused:selected {
-	-fx-background-color: #DDE7FF;
+
+/* =========================================================
+   LEFT ENTRY AREA
+   ========================================================= */
+
+.sale-entry-area {
+    -fx-padding: 18.0px;
+    -fx-border-color: #e3e5e8;
+    -fx-border-width: 0.0 1.0px 0.0 0.0;
 }
 
-.cart-table .table-cell,
-.history-table .table-cell {
-	-fx-border-color: transparent;
-
-	-fx-padding: 0 10px;
-
-	-fx-font-size: 13px;
-
-	-fx-text-fill: #34383E;
-
+.field-label {
+    -fx-font-size: 10.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #747a82;
 }
 
-/* ============================================================
-EMPTY STATE
-============================================================ */
-
-.empty-title {
-	-fx-font-size: 14px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: #747983;
-
+.field-hint {
+    -fx-font-size: 11.0px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #979ca3;
 }
 
-.empty-description {
-	-fx-font-size: 12px;
-	-fx-text-fill: #A0A4AB;
+.navigation-hint {
+    -fx-font-size: 11.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #858a91;
 }
 
-/* ============================================================
-CART FOOTER
-============================================================ */
 
-.cart-footer {
-	-fx-padding: 4px 0 0 0;
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.product-search,
+.history-search {
+    -fx-background-color: #f4f5f7;
+    -fx-background-radius: 8.0px;
+
+    -fx-border-color: #d9dde2;
+    -fx-border-radius: 8.0px;
+    -fx-border-width: 1.0px;
+
+    -fx-padding: 12.0px 14.0px;
+
+    -fx-font-size: 14.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #17191d;
 }
 
-.shortcut-label {
-	-fx-font-size: 10px;
-	-fx-text-fill: #92969E;
+.product-search {
+    -fx-font-size: 15.0px;
 }
 
-/* ============================================================
-SALE SUMMARY
-============================================================ */
-
-.summary-panel {
-	-fx-min-width: 280px;
+.product-search:focused,
+.history-search:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #202328;
+    -fx-border-width: 2.0px;
 }
 
-.summary-label {
-	-fx-font-size: 13px;
-	-fx-text-fill: #777C85;
-}
-
-.summary-amount {
-	-fx-font-size: 13px;
-	-fx-font-weight: 600;
-
-	-fx-text-fill: #33373D;
-
-}
-
-.total-caption {
-	-fx-font-size: 11px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: #858A93;
-
-}
-
-.total-value {
-	-fx-font-size: 34px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: #17191C;
-
-}
-
-/* ============================================================
-PAYMENT BUTTON
-============================================================ */
-
-.payment-button {
-	-fx-background-color: #F0F2F5;
-
-	-fx-background-radius: 13px;
-
-	-fx-padding: 13px;
-
-	-fx-font-size: 13px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: #30343A;
-
-}
-
-.payment-button:hover {
-	-fx-background-color: #E7E9ED;
-}
-
-.payment-button:focused {
-	-fx-background-color: #E7EDFF;
-
-	-fx-border-color: #5B7CFA;
-	-fx-border-width: 2px;
-
-	-fx-border-radius: 13px;
-
-}
-
-/* ============================================================
-COMPLETE SALE
-============================================================ */
-
-.complete-button {
-	-fx-background-color: #2563EB;
-
-	-fx-background-radius: 13px;
-
-	-fx-padding: 14px;
-
-	-fx-font-size: 14px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: white;
-
-}
-
-.complete-button:hover {
-	-fx-background-color: #1D4ED8;
-}
-
-.complete-button:focused {
-	-fx-background-color: #1D4ED8;
-
-	-fx-border-color: #111827;
-	-fx-border-width: 2px;
-
-	-fx-border-radius: 13px;
-
-}
-
-.complete-hint {
-	-fx-alignment: CENTER;
-
-	-fx-font-size: 10px;
-
-	-fx-text-fill: #9A9EA6;
-
-}
-
-/* ============================================================
-SEARCH
-============================================================ */
-
-.search-field {
-	-fx-background-color: #FFFFFF;
-
-	-fx-background-radius: 12px;
-
-	-fx-border-color: #E0E3E7;
-	-fx-border-radius: 12px;
-
-	-fx-padding: 11px 14px;
-
-	-fx-font-size: 13px;
-
-}
-
-.search-field:focused {
-	-fx-border-color: #5B7CFA;
-
-	-fx-border-width: 2px;
-
+.product-search .text {
+    -fx-fill: #17191d;
 }
 
 .search-button {
-	-fx-background-color: #20242A;
+    -fx-background-color: #17191d;
+    -fx-background-radius: 8.0px;
 
-	-fx-background-radius: 12px;
+    -fx-padding: 0.0 18.0px;
 
-	-fx-padding: 11px 20px;
-
-	-fx-font-size: 12px;
-	-fx-font-weight: 700;
-
-	-fx-text-fill: white;
-
+    -fx-font-size: 12.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ffffff;
 }
 
 .search-button:hover {
-	-fx-background-color: #111418;
+    -fx-background-color: #292c31;
 }
 
-/* ============================================================
-HISTORY
-============================================================ */
-
-.history-container {
-	-fx-background-color: transparent;
+.search-button:focused {
+    -fx-border-color: #17191d;
+    -fx-border-width: 2.0px;
 }
 
-/* ============================================================
-FOOTER
-============================================================ */
 
-.footer {
-	-fx-background-color: #FFFFFF;
+/* =========================================================
+   PRODUCT LIST
+   ========================================================= */
 
-	-fx-border-color: #E7E9EC transparent transparent transparent;
-
+.product-results {
+    -fx-padding: 2.0px 0.0;
 }
 
-.footer-shortcut {
-	-fx-font-size: 11px;
+.product-list {
+    -fx-background-color: #f8f9fa;
 
-	-fx-text-fill: #777C85;
+    -fx-border-color: #e1e4e8;
+    -fx-border-radius: 8.0px;
+    -fx-background-radius: 8.0px;
 
+    -fx-padding: 3.0px;
 }
 
-/* ============================================================
-FOCUS
-============================================================ */
+.product-list .viewport {
+    -fx-background-color: transparent;
+}
+
+.product-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 13.0px 12.0px;
+
+    -fx-font-size: 13.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #292c31;
+}
+
+.product-list .list-cell:hover {
+    -fx-background-color: #eceff2;
+}
+
+.product-list .list-cell:selected {
+    -fx-background-color: #202328;
+    -fx-text-fill: #ffffff;
+}
+
+.product-list .list-cell:focused {
+    -fx-background-color: #e5e8eb;
+}
+
+.product-list .list-cell:selected:focused {
+    -fx-background-color: #202328;
+}
+
+
+/* =========================================================
+   SELECTED PRODUCT
+   ========================================================= */
+
+.selected-product {
+    -fx-background-color: #f7f8f9;
+    -fx-background-radius: 9.0px;
+
+    -fx-border-color: #e0e3e7;
+    -fx-border-radius: 9.0px;
+
+    -fx-padding: 15.0px;
+}
+
+.selected-product-name {
+    -fx-font-size: 16.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #181a1e;
+}
+
+.selected-price {
+    -fx-font-size: 17.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #181a1e;
+}
+
+.number-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 7.0px;
+
+    -fx-border-color: #d8dce0;
+    -fx-border-radius: 7.0px;
+
+    -fx-padding: 10.0px;
+
+    -fx-font-size: 14.0px;
+    -fx-font-weight: 700;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.number-field:focused {
+    -fx-border-color: #202328;
+    -fx-border-width: 2.0px;
+}
+
+.add-item-button {
+    -fx-background-color: #202328;
+    -fx-background-radius: 7.0px;
+
+    -fx-padding: 11.0px;
+
+    -fx-font-size: 13.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ffffff;
+}
+
+.add-item-button:hover {
+    -fx-background-color: #30343a;
+}
+
+.add-item-button:focused {
+    -fx-border-color: #202328;
+    -fx-border-width: 2.0px;
+}
+
+
+/* =========================================================
+   CURRENT SALE
+   ========================================================= */
+
+.current-sale-panel {
+    -fx-padding: 18.0px;
+}
+
+.current-sale-title {
+    -fx-font-size: 18.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #17191d;
+}
+
+.current-sale-subtitle {
+    -fx-font-size: 12.0px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #858a91;
+}
+
+.sale-reference {
+    -fx-padding: 6.0px 8.0px;
+
+    -fx-background-color: #eef0f2;
+    -fx-background-radius: 5.0px;
+
+    -fx-font-size: 10.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #666c74;
+}
+
+
+/* =========================================================
+   SALE TABLE
+   ========================================================= */
+
+.sale-table,
+.history-table {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.0;
+}
+
+.sale-table .column-header-background,
+.history-table .column-header-background {
+    -fx-background-color: #f4f5f6;
+}
+
+.sale-table .column-header,
+.history-table .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 10.0px 8.0px;
+    -fx-border-color: transparent transparent #e1e4e7 transparent;
+}
+
+.sale-table .column-header .label,
+.history-table .column-header .label {
+    -fx-font-size: 10.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #858a91;
+}
+
+.sale-table .table-row-cell,
+.history-table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #eef0f2 transparent;
+}
+
+.sale-table .table-row-cell:hover,
+.history-table .table-row-cell:hover {
+    -fx-background-color: #f5f6f7;
+}
+
+.sale-table .table-row-cell:selected,
+.history-table .table-row-cell:selected {
+    -fx-background-color: #e9ecef;
+}
+
+.sale-table .table-cell,
+.history-table .table-cell {
+    -fx-padding: 12.0px 8.0px;
+
+    -fx-font-size: 13.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #292c31;
+}
+
+
+/* =========================================================
+   TABLE ACTIONS
+   ========================================================= */
+
+.table-action {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.0;
+
+    -fx-padding: 5.0px 7.0px;
+
+    -fx-font-size: 11.0px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #676d75;
+}
+
+.table-action:hover {
+    -fx-background-color: #eef0f2;
+    -fx-background-radius: 5.0px;
+}
+
+.table-action:focused {
+    -fx-background-color: #e5e8eb;
+}
+
+
+/* =========================================================
+   ACTION HINT
+   ========================================================= */
+
+.action-key {
+    -fx-padding: 4.0px 6.0px;
+
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 4.0px;
+
+    -fx-font-size: 9.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #5e646c;
+}
+
+.action-label {
+    -fx-font-size: 11.0px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #858a91;
+}
+
+
+/* =========================================================
+   SALE SUMMARY
+   ========================================================= */
+
+.summary-label {
+    -fx-font-size: 11.0px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #858a91;
+}
+
+.summary-value {
+    -fx-font-size: 13.0px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #363a40;
+}
+
+.grand-total {
+    -fx-padding: 13.0px 0.0 2.0px 0.0;
+}
+
+.total-label {
+    -fx-font-size: 14.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #17191d;
+}
+
+.total-value {
+    -fx-font-size: 28.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #17191d;
+}
+
+
+/* =========================================================
+   PAYMENT
+   ========================================================= */
+
+.payment-button {
+    -fx-background-color: #17191d;
+    -fx-background-radius: 8.0px;
+
+    -fx-padding: 15.0px;
+
+    -fx-font-size: 15.0px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #ffffff;
+}
+
+.payment-button:hover {
+    -fx-background-color: #292c31;
+}
+
+.payment-button:focused {
+    -fx-border-color: #17191d;
+    -fx-border-width: 2.0px;
+}
+
+
+/* =========================================================
+   SALES HISTORY
+   ========================================================= */
+
+.sales-history {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0.0 10.0px 10.0px 10.0px;
+
+    -fx-border-color: #dfe2e6;
+    -fx-border-radius: 0.0 10.0px 10.0px 10.0px;
+    -fx-border-width: 1.0px;
+
+    -fx-padding: 18.0px;
+}
+
+.filter-button {
+    -fx-background-color: #f1f3f5;
+    -fx-background-radius: 7.0px;
+
+    -fx-border-color: #dfe2e6;
+    -fx-border-radius: 7.0px;
+
+    -fx-padding: 11.0px 14.0px;
+
+    -fx-font-size: 12.0px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #454a51;
+}
+
+.filter-button:hover {
+    -fx-background-color: #e8eaed;
+}
+
+.filter-button:focused {
+    -fx-border-color: #202328;
+    -fx-border-width: 2.0px;
+}
+
+
+/* =========================================================
+   GENERAL FOCUS
+   ========================================================= */
 
 .button:focused {
-	-fx-border-color: #5B7CFA;
-	-fx-border-width: 2px;
-}
-
-.text-field:focused {
-	-fx-border-color: #5B7CFA;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }
